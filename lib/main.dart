@@ -1,3 +1,4 @@
+import 'package:adud_project/screens/language/choose_language_screen.dart' show ChooseLanguageScreen;
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,7 +11,8 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(
+      debugShowCheckedModeBanner: false,
+      home: ChooseLanguageScreen(
       
       ),
     );
