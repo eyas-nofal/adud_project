@@ -1,4 +1,5 @@
 import 'package:adud_project/l10n/app_localizations.dart';
+import 'package:adud_project/screens/language/choose_language_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -51,6 +52,7 @@ class _MainAppState extends State<MainApp> {
             Locale('en'), // English
             Locale('ar'), // Arabic
           ],
+          home: ChooseLanguageScreen(),
         );
       },
     );
