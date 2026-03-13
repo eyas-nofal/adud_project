@@ -48,6 +48,8 @@ class _MainAppState extends State<MainApp> {
             GlobalWidgetsLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
           ],
+              home: ChooseLanguageScreen() ,
+
           supportedLocales: const [
             Locale('en'), // English
             Locale('ar'), // Arabic
