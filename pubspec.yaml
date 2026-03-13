@@ -1,6 +1,5 @@
 name: adud_project
 description: "A new Flutter project."
-publish_to: 'none'
 version: 0.1.0+1
 
 environment:
@@ -9,6 +8,16 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_gen: ^5.13.0+1
+  flutter_localizations:
+    sdk: flutter
+  flutter_screenutil: ^5.9.3
+  google_fonts: ^8.0.2
+  intl: any
+
+
+
+
 
 dev_dependencies:
   flutter_test:
@@ -18,6 +27,3 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
-
-assets:
-    - assets/images/
