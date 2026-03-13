@@ -9,6 +9,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_gen: ^5.13.0+1
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+
+
+
+
 
 dev_dependencies:
   flutter_test:
@@ -17,3 +25,4 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  generate: true
