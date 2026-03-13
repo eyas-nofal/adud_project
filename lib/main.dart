@@ -46,7 +46,6 @@ class _MainAppState extends State<MainApp> {
             Locale('en'), // English
             Locale('ar'), // Arabic
           ],
-         // استبدل child بـ LanguageSelectionScreen
         );
       },
     );
