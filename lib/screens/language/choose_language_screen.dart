@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ChooseLanguageScreen extends StatelessWidget {
   const ChooseLanguageScreen({super.key});
@@ -15,15 +17,17 @@ class ChooseLanguageScreen extends StatelessWidget {
             children: [
               Text(
                 "عضُد",
-                style: TextStyle(fontSize: 46, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 40.sp, fontWeight: FontWeight.bold)
               ),
               SizedBox(height: 20),
               Text(
-                "choose your language | أختر لغتك",
-                style: TextStyle(fontSize: 17, color: Colors.black87),
+                " أختر لغتك | choose your language",
+                style: TextStyle(fontSize: 15.sp,)
               ),
-              SizedBox(height: 40),
-              SizedBox(width: 370,height: 110,
+              SizedBox(height: 60),
+              SizedBox(
+                width: 370,
+                height: 110,
                 child: ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
@@ -31,7 +35,7 @@ class ChooseLanguageScreen extends StatelessWidget {
                     foregroundColor: Colors.black,
                     elevation: 4,
                     shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(20),
                     ),
                     padding: EdgeInsets.symmetric(vertical: 20),
                   ),
@@ -39,22 +43,21 @@ class ChooseLanguageScreen extends StatelessWidget {
                     children: [
                       Text(
                         "العربية",
-                        style: TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                        ),
+                        style: TextStyle(fontSize: 27.sp, fontWeight: FontWeight.bold)
                       ),
-                      SizedBox(height: 4,),
+                      SizedBox(height: 4),
                       Text(
                         "اللغة الأساسية",
-                        style: TextStyle(fontSize: 18, color: Colors.black),
+                        style: TextStyle(fontSize: 15.sp,color: Colors.black87)
                       ),
                     ],
                   ),
                 ),
               ),
-              SizedBox(height: 15,),
-              SizedBox(width: 370,height: 110,
+              SizedBox(height: 15),
+              SizedBox(
+                width: 370,
+                height: 110,
                 child: ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
@@ -62,7 +65,7 @@ class ChooseLanguageScreen extends StatelessWidget {
                     foregroundColor: Colors.black,
                     elevation: 4,
                     shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(20),
                     ),
                     padding: EdgeInsets.symmetric(vertical: 20),
                   ),
@@ -70,23 +73,26 @@ class ChooseLanguageScreen extends StatelessWidget {
                     children: [
                       Text(
                         "English",
-                        style: TextStyle(
-                          fontSize: 23,
-                          fontWeight: FontWeight.bold,
-                        ),
+                        style: TextStyle(fontSize: 28.sp, fontWeight: FontWeight.bold)
                       ),
-                      SizedBox(height: 4,),
+                      SizedBox(height: 4),
                       Text(
                         "Application language",
-                        style: TextStyle(fontSize: 15, color: Colors.black87),
+                        style: TextStyle(fontSize: 15.sp, color: Colors.black87)
                       ),
                     ],
                   ),
                 ),
               ),
-              SizedBox(height: 24,),
-              Text("يمكنك تغيير اللغة لاحقاً من الإعدادات"),
-              Text("You can change the language later in settings")
+              SizedBox(height: 24),
+              Text(
+                "يمكنك تغيير اللغة لاحقاً من الإعدادات",
+                style: TextStyle(fontSize: 13.sp, color: Colors.black87)
+              ),
+              Text(
+                "You can change the language later in settings",
+                style: TextStyle(fontSize: 13.sp, color: Colors.black87)
+              ),
             ],
           ),
         ),
