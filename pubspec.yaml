@@ -12,6 +12,7 @@ dependencies:
   flutter_gen: ^5.13.0+1
   flutter_localizations:
     sdk: flutter
+  flutter_screenutil: ^5.9.3
   intl: any
 
 
