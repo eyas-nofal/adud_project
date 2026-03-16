@@ -6,7 +6,6 @@ import 'package:google_fonts/google_fonts.dart';
 class ChooseLanguageScreen extends StatelessWidget {
   const ChooseLanguageScreen({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
