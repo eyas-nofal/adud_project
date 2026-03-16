@@ -1,6 +1,8 @@
 import 'dart:ui';
 
 import 'package:adud_project/l10n/app_localizations.dart';
+import 'package:adud_project/screens/auth/login_screen.dart';
+import 'package:adud_project/screens/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -26,7 +28,7 @@ class WelcomeScreen extends StatelessWidget {
                     width: 100.w,
                     height: 100.w,
                     decoration: BoxDecoration(
-                      color: Colors.white.withValues(alpha:0.15),
+                      color: Colors.white.withValues(alpha: 0.15),
                       borderRadius: BorderRadius.circular(28.r),
                       border: Border.all(
                         color: Colors.white.withValues(alpha: 0.2),
@@ -47,7 +49,7 @@ class WelcomeScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20.h),
-          
+
               Text(
                 AppLocalizations.of(context)!.appName,
                 style: TextStyle(
@@ -74,6 +76,35 @@ class WelcomeScreen extends StatelessWidget {
                   fontWeight: FontWeight.w700,
                   color: Colors.white,
                 ),
+              ),
+              SizedBox(height: 40.h),
+
+              CustomButton(
+                width: 1000.w,
+                height: 50.h,
+                backgroundColor: Colors.white,
+                textColor: Colors.blue,
+                text: AppLocalizations.of(context)!.createAccount,
+                onPressed: () {
+                  
+                },
+              ),
+              SizedBox(height: 20.h),
+
+              CustomButton(
+                width: 1000.w,
+                height: 50.h,
+                backgroundColor: Colors.white,
+                textColor: Colors.blue,
+                text: AppLocalizations.of(context)!.login,
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const LoginScreen(),
+                    ),
+                  );
+                },
               ),
             ],
           ),
