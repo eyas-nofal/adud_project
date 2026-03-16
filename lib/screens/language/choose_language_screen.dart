@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'app.dart'; 
+
 class ChooseLanguageScreen extends StatelessWidget {
   const ChooseLanguageScreen({super.key});
-
 
   @override
   Widget build(BuildContext context) {
@@ -32,79 +33,25 @@ class ChooseLanguageScreen extends StatelessWidget {
                 style: GoogleFonts.roboto(fontSize: 15.sp),
               ),
               SizedBox(height: 50.h),
-              SizedBox(
-                width: 370.w,
-                height: 105.h,
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,
-                    foregroundColor: Colors.black,
-                    elevation: 3,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    padding: EdgeInsets.symmetric(vertical: 20),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "العربية",
-                        style: GoogleFonts.cairo(
-                          fontSize: 27.sp,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      SizedBox(height: 4.h),
-                      Text(
-                        "اللغة الأساسية",
-                        style: GoogleFonts.cairo(
-                          fontSize: 15.sp,
-                          color: Colors.grey[800],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+              
+              // زر اللغة العربية
+              _languageButton(
+                context, 
+                title: "العربية", 
+                subtitle: "اللغة الأساسية", 
+                locale: const Locale('ar'),
               ),
+              
               SizedBox(height: 17.h),
-              SizedBox(
-                width: 370.w,
-                height: 105.h,
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,
-                    foregroundColor: Colors.black,
-                    elevation: 3,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    padding: EdgeInsets.symmetric(vertical: 20),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "English",
-                        style: GoogleFonts.cairo(
-                          fontSize: 24.sp,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      SizedBox(height: 4.h),
-                      Text(
-                        "Application language",
-                        style: GoogleFonts.cairo(
-                          fontSize: 15.sp,
-                          color: Colors.grey[800],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+              
+              // زر اللغة الإنجليزية
+              _languageButton(
+                context, 
+                title: "English", 
+                subtitle: "Application language", 
+                locale: const Locale('en'),
               ),
+              
               SizedBox(height: 30.h),
               Text(
                 "يمكنك تغيير اللغة لاحقاً من الإعدادات",
@@ -123,6 +70,52 @@ class ChooseLanguageScreen extends StatelessWidget {
               ),
             ],
           ),
+        ),
+      ),
+    );
+  }
+
+  // دالة مساعدة للأزرار عشان الكود يكون أنظف
+  Widget _languageButton(BuildContext context, {required String title, required String subtitle, required Locale locale}) {
+    return SizedBox(
+      width: 370.w,
+      height: 105.h,
+      child: ElevatedButton(
+        onPressed: () {
+          // 2. تفعيل تغيير اللغة فوراً
+          AppRoot.of(context)!.setLocale(locale);
+          
+          // نصيحة: يمكنك إضافة التنقل لشاشة الـ Home هنا بعد اختيار اللغة
+          // Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => NextScreen()));
+        },
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.white,
+          foregroundColor: Colors.black,
+          elevation: 3,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
+          padding: const EdgeInsets.symmetric(vertical: 20),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              title,
+              style: GoogleFonts.cairo(
+                fontSize: 27.sp,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 4.h),
+            Text(
+              subtitle,
+              style: GoogleFonts.cairo(
+                fontSize: 5.sp,
+                color: Colors.grey[800],
+              ),
+            ),
+          ],
         ),
       ),
     );
