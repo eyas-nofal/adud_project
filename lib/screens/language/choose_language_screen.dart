@@ -1,8 +1,8 @@
+import 'package:adud_project/app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'app.dart'; 
 
 class ChooseLanguageScreen extends StatelessWidget {
   const ChooseLanguageScreen({super.key});
@@ -34,7 +34,6 @@ class ChooseLanguageScreen extends StatelessWidget {
               ),
               SizedBox(height: 50.h),
               
-              // زر اللغة العربية
               _languageButton(
                 context, 
                 title: "العربية", 
@@ -44,7 +43,6 @@ class ChooseLanguageScreen extends StatelessWidget {
               
               SizedBox(height: 17.h),
               
-              // زر اللغة الإنجليزية
               _languageButton(
                 context, 
                 title: "English", 
@@ -75,18 +73,14 @@ class ChooseLanguageScreen extends StatelessWidget {
     );
   }
 
-  // دالة مساعدة للأزرار عشان الكود يكون أنظف
   Widget _languageButton(BuildContext context, {required String title, required String subtitle, required Locale locale}) {
     return SizedBox(
       width: 370.w,
       height: 105.h,
       child: ElevatedButton(
         onPressed: () {
-          // 2. تفعيل تغيير اللغة فوراً
           AppRoot.of(context)!.setLocale(locale);
           
-          // نصيحة: يمكنك إضافة التنقل لشاشة الـ Home هنا بعد اختيار اللغة
-          // Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => NextScreen()));
         },
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.white,
@@ -111,7 +105,7 @@ class ChooseLanguageScreen extends StatelessWidget {
             Text(
               subtitle,
               style: GoogleFonts.cairo(
-                fontSize: 5.sp,
+                fontSize: 15.sp,
                 color: Colors.grey[800],
               ),
             ),
