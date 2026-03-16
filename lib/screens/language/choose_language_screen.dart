@@ -28,7 +28,7 @@ class ChooseLanguageScreen extends StatelessWidget {
               ),
               SizedBox(height: 10.h),
               Text(
-                " أختر لغتك | choose your language",
+                " اختر لغتك | choose your language",
                 style: GoogleFonts.roboto(fontSize: 15.sp),
               ),
               SizedBox(height: 50.h),
