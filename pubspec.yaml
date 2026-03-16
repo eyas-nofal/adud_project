@@ -8,6 +8,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  flutter_svg: ^2.2.4
+
   flutter_gen: ^5.13.0+1
   flutter_localizations:
     sdk: flutter
@@ -15,9 +19,6 @@ dependencies:
   flutter_svg: ^2.2.4
   google_fonts: ^8.0.2
   intl: any
-
-
-
 
 
 dev_dependencies:
@@ -28,3 +29,6 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
+
+  assets:
+    - assets/imgSVG/
