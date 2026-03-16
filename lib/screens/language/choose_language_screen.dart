@@ -1,4 +1,5 @@
 import 'package:adud_project/app.dart';
+import 'package:adud_project/screens/auth/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -33,23 +34,23 @@ class ChooseLanguageScreen extends StatelessWidget {
                 style: GoogleFonts.roboto(fontSize: 15.sp),
               ),
               SizedBox(height: 50.h),
-              
+
               _languageButton(
-                context, 
-                title: "العربية", 
-                subtitle: "اللغة الأساسية", 
+                context,
+                title: "العربية",
+                subtitle: "اللغة الأساسية",
                 locale: const Locale('ar'),
               ),
-              
+
               SizedBox(height: 17.h),
-              
+
               _languageButton(
-                context, 
-                title: "English", 
-                subtitle: "Application language", 
+                context,
+                title: "English",
+                subtitle: "Application language",
                 locale: const Locale('en'),
               ),
-              
+
               SizedBox(height: 30.h),
               Text(
                 "يمكنك تغيير اللغة لاحقاً من الإعدادات",
@@ -73,14 +74,22 @@ class ChooseLanguageScreen extends StatelessWidget {
     );
   }
 
-  Widget _languageButton(BuildContext context, {required String title, required String subtitle, required Locale locale}) {
+  Widget _languageButton(
+    BuildContext context, {
+    required String title,
+    required String subtitle,
+    required Locale locale,
+  }) {
     return SizedBox(
       width: 370.w,
       height: 105.h,
       child: ElevatedButton(
         onPressed: () {
           AppRoot.of(context)!.setLocale(locale);
-          
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => const WelcomeScreen()),
+          );
         },
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.white,
