@@ -16,12 +16,7 @@ class _LoginScreenState extends State<LoginScreen> {
       body: Column(
         children: [
           SizedBox(height: 400,),
-          TextField(
-  decoration: decorationForTextField.copyWith(
-    hintText: "user name", 
-    prefixIcon: Icon(Icons.person), 
-  ),
-)
+          
         ],
       ),
     );

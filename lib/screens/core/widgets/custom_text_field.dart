@@ -30,3 +30,12 @@ final decorationForTextField = InputDecoration(
   contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
   
 );
+
+/*
+TextField(
+  decoration: decorationForTextField.copyWith(
+    hintText: "user name", 
+    prefixIcon: Icon(Icons.person), 
+  ),
+)
+*/

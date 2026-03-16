@@ -1,5 +1,4 @@
 import 'package:adud_project/l10n/app_localizations.dart';
-import 'package:adud_project/screens/auth/login_screen.dart';
 import 'package:adud_project/screens/language/choose_language_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -49,7 +48,7 @@ class _MainAppState extends State<MainApp> {
             GlobalWidgetsLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
           ],
-              home: LoginScreen() ,
+              home: ChooseLanguageScreen() ,
 
           supportedLocales: const [
             Locale('en'), // English
