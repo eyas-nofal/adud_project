@@ -34,7 +34,6 @@ class WelcomeScreen extends StatelessWidget {
                         color: Colors.white.withValues(alpha: 0.2),
                         width: 1,
                       ),
-                      
                     ),
                     child: Center(
                       child: SvgPicture.asset(
