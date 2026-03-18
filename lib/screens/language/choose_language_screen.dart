@@ -94,7 +94,6 @@ class ChooseLanguageScreen extends StatelessWidget {
       height: 105.h,
       child: ElevatedButton(
         onPressed: () {
-          AppRoot.of(context)!.setLocale(locale);
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(builder: (context) => const WelcomeScreen()),

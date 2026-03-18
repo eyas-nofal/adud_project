@@ -1,32 +1,20 @@
-import 'package:adud_project/screens/auth/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart'; // سطر ضروري جداً
 import 'package:adud_project/l10n/app_localizations.dart';
+import 'package:adud_project/screens/auth/welcome_screen.dart';
 import 'package:adud_project/screens/language/choose_language_screen.dart';
+import 'package:adud_project/providers/language_provider.dart'; // تأكد من المسار الجديد بعد النقل
 
-class AppRoot extends StatefulWidget {
+class AppRoot extends StatelessWidget {
   const AppRoot({super.key});
 
   @override
-  State<AppRoot> createState() => AppRootState();
-
-  static AppRootState? of(BuildContext context) =>
-      context.findAncestorStateOfType<AppRootState>();
-}
-
-class AppRootState extends State<AppRoot> {
-  Locale _locale = const Locale('ar'); 
-
-  void setLocale(Locale value) {
-    setState(() {
-      _locale = value;
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
+    final languageProvider = context.watch<LanguageProvider>();
+
     return ScreenUtilInit(
       designSize: const Size(393, 852),
       minTextAdapt: true,
@@ -36,7 +24,8 @@ class AppRootState extends State<AppRoot> {
           debugShowCheckedModeBanner: false,
           title: 'Adud Project',
           
-          locale: _locale,
+          locale: languageProvider.locale, 
+
           supportedLocales: const [
             Locale('en'),
             Locale('ar'),
@@ -53,7 +42,6 @@ class AppRootState extends State<AppRoot> {
           ),
 
           home: const ChooseLanguageScreen(),
-          
         );
       },
     );
