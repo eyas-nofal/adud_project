@@ -39,9 +39,10 @@ class CreateNewAccount extends StatelessWidget {
                   style: TextStyle(fontSize: 20.sp, color: Colors.black),
                 ),
               ),
+              SizedBox(height: 10.h,),
               TextFormField(
                 decoration: AppInputStyles.decorationForTextField(
-                  hintText: AppLocalizations.of(context)!.hintTextFirstName,
+                  hintText: "احمد"
                 ),
               ),
             ],
