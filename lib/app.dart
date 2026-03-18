@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart'; // سطر ضروري جداً
+import 'package:provider/provider.dart';
 import 'package:adud_project/l10n/app_localizations.dart';
 import 'package:adud_project/screens/auth/welcome_screen.dart';
 import 'package:adud_project/screens/language/choose_language_screen.dart';
-import 'package:adud_project/providers/language_provider.dart'; // تأكد من المسار الجديد بعد النقل
+import 'package:adud_project/providers/language_provider.dart'; 
 
 class AppRoot extends StatelessWidget {
   const AppRoot({super.key});
