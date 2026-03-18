@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
-import 'app.dart'; 
-
+import 'package:provider/provider.dart';
+import 'app.dart';
+import 'language_provider.dart'; // تأكد أن اسم الملف هنا مطابق لاسم ملفك 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   
-  runApp(const AppRoot());
+  runApp(
+  ChangeNotifierProvider(
+    create: (context) => LocalProvider(), // تأكد من الاسم هنا
+    child: const AppRoot(),
+  ),
+);
 }
