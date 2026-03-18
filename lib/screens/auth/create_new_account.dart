@@ -33,14 +33,17 @@ class CreateNewAccount extends StatelessWidget {
               ),
               SizedBox(height: 40.h),
               Align(
-                alignment: Alignment
-                    .topLeft,
+                alignment: Alignment.topLeft,
                 child: Text(
                   AppLocalizations.of(context)!.firstName,
                   style: TextStyle(fontSize: 20.sp, color: Colors.black),
                 ),
               ),
-            
+              TextFormField(
+                decoration: AppInputStyles.decorationForTextField(
+                  hintText: AppLocalizations.of(context)!.hintTextFirstName,
+                ),
+              ),
             ],
           ),
         ),
