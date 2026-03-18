@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:adud_project/l10n/app_localizations.dart';
 import 'package:adud_project/providers/language_provider.dart';
+import 'package:adud_project/screens/auth/create_new_account.dart';
 import 'package:adud_project/screens/auth/login_screen.dart';
 import 'package:adud_project/screens/core/widgets/custom_button.dart';
 import 'package:adud_project/screens/language/choose_language_screen.dart';
@@ -147,7 +148,14 @@ class WelcomeScreen extends StatelessWidget {
                 backgroundColor: Colors.white,
                 textColor: Colors.blue,
                 text: AppLocalizations.of(context)!.createAccount,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const CreateNewAccount(),
+                    ),
+                  );
+                },
               ),
               SizedBox(height: 20.h),
 
