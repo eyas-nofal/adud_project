@@ -7,7 +7,7 @@ void main() {
   
   runApp(
   ChangeNotifierProvider(
-    create: (context) => LocalProvider(), // تأكد من الاسم هنا
+    create: (context) => LanguageProvider(),
     child: const AppRoot(),
   ),
 );

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class LocalProvider extends ChangeNotifier {
+class LanguageProvider extends ChangeNotifier {
    Locale _locale = const Locale('ar');
 
   Locale get locale => _locale;
