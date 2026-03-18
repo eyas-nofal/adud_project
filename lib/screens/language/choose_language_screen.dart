@@ -1,5 +1,6 @@
 import 'package:adud_project/app.dart';
 import 'package:adud_project/screens/auth/welcome_screen.dart';
+import 'package:adud_project/screens/core/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -11,15 +12,23 @@ class ChooseLanguageScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(244, 247, 252, 1),
+      backgroundColor: AppColors.primary100,
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SvgPicture.asset('assets/imgSVG/globe-svg.svg', width: 80),
-              SizedBox(height: 14.h),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(25.0),
+                child: SvgPicture.asset(
+                  'assets/imgSVG/globe-svg.svg',
+                  width: 80,
+                  height: 80,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              SizedBox(height: 30.h),
               Text(
                 "عَضُد",
                 style: GoogleFonts.cairo(
@@ -51,7 +60,7 @@ class ChooseLanguageScreen extends StatelessWidget {
                 locale: const Locale('en'),
               ),
 
-              SizedBox(height: 30.h),
+              SizedBox(height: 40.h),
               Text(
                 "يمكنك تغيير اللغة لاحقاً من الإعدادات",
                 style: GoogleFonts.cairo(
