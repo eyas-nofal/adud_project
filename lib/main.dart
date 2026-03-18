@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'app.dart'; 
-
+import 'package:adud_project/providers/language_provider.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   
-  runApp(const AppRoot());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => LanguageProvider(), 
+      child: const AppRoot(),
+    ),
+  );
 }

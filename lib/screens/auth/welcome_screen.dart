@@ -1,12 +1,14 @@
 import 'dart:ui';
 
 import 'package:adud_project/l10n/app_localizations.dart';
+import 'package:adud_project/providers/language_provider.dart';
 import 'package:adud_project/screens/auth/login_screen.dart';
 import 'package:adud_project/screens/core/widgets/custom_button.dart';
 import 'package:adud_project/screens/language/choose_language_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:provider/provider.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -65,12 +67,7 @@ class WelcomeScreen extends StatelessWidget {
           child: Center(
             child: GestureDetector(
               onTap: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const ChooseLanguageScreen(),
-                  ),
-                );
+                context.read<LanguageProvider>().toggleLocale();
               },
               child: _buildGlassLanguageButton(context),
             ),

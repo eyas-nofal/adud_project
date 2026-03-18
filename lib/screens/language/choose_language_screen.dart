@@ -1,10 +1,12 @@
 import 'package:adud_project/app.dart';
+import 'package:adud_project/providers/language_provider.dart';
 import 'package:adud_project/screens/auth/welcome_screen.dart';
 import 'package:adud_project/screens/core/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class ChooseLanguageScreen extends StatelessWidget {
   const ChooseLanguageScreen({super.key});
@@ -94,7 +96,7 @@ class ChooseLanguageScreen extends StatelessWidget {
       height: 105.h,
       child: ElevatedButton(
         onPressed: () {
-          AppRoot.of(context)!.setLocale(locale);
+          context.read<LanguageProvider>().setLocale(locale);
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(builder: (context) => const WelcomeScreen()),
