@@ -5,7 +5,6 @@ import 'package:adud_project/providers/language_provider.dart';
 import 'package:adud_project/screens/auth/create_new_account.dart';
 import 'package:adud_project/screens/auth/login_screen.dart';
 import 'package:adud_project/screens/core/widgets/custom_button.dart';
-import 'package:adud_project/screens/language/choose_language_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
