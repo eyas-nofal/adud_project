@@ -91,17 +91,17 @@ class _LoginScreenState extends State<LoginScreen> {
                 text: AppLocalizations.of(context)!.login,
                 onPressed: () {},
               ),
-              SizedBox(height: 15,),
+              SizedBox(height: 15.h),
               SizedBox(
-                height: 50,
+                height: 50.h,
                 child: Row(
                   children: [
                     Expanded(
-                      child: Divider(thickness: 0.6, color: Colors.black),
+                      child: Divider(thickness: 0.6.h, color: Colors.black),
                     ),
                     Text(AppLocalizations.of(context)!.or),
                     Expanded(
-                      child: Divider(thickness: 0.6, color: Colors.black),
+                      child: Divider(thickness: 0.6.h, color: Colors.black),
                     ),
                   ],
                 ),
@@ -111,14 +111,17 @@ class _LoginScreenState extends State<LoginScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(AppLocalizations.of(context)!.dontHaveAccount),
-                  TextButton(onPressed: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const CreateNewAccount(),
-                      ),
-                    );
-                  }, child: Text(AppLocalizations.of(context)!.createNewAccount)),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const CreateNewAccount(),
+                        ),
+                      );
+                    },
+                    child: Text(AppLocalizations.of(context)!.createNewAccount),
+                  ),
                 ],
               ),
             ],

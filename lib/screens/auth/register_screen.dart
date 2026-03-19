@@ -25,16 +25,16 @@ class RegisterScreen extends StatelessWidget {
                   color: Colors.blue,
                 ),
               ),
-              SizedBox(height: 20.h),
+              SizedBox(height: 10.h),
               Text(
                 AppLocalizations.of(context)!.selectUserTypeSub,
                 style: TextStyle(fontSize: 15.sp, color: Colors.black),
               ),
-              SizedBox(height: 20.h),
+              SizedBox(height:60.h),
 
               SizedBox(
                 width: double.infinity,
-                height: 230.h,
+                height: 220.h,
                 child: ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
@@ -60,7 +60,7 @@ class RegisterScreen extends StatelessWidget {
                             color: Colors.white,
                           ),
                         ),
-                        SizedBox(height: 20.h),
+                        SizedBox(height: 15.h),
 
                         Text(
                           AppLocalizations.of(context)!.disabilityUser,
@@ -70,7 +70,7 @@ class RegisterScreen extends StatelessWidget {
                             color: AppColors.primary400,
                           ),
                         ),
-                        SizedBox(height: 20.h),
+                        SizedBox(height: 15.h),
 
                         Text(
                           AppLocalizations.of(context)!.disabilityUserDesc,
@@ -85,10 +85,10 @@ class RegisterScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 10.h),
+              SizedBox(height: 20.h),
               SizedBox(
                 width: double.infinity,
-                height: 230.h,
+                height: 220.h,
                 child: ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
@@ -104,7 +104,7 @@ class RegisterScreen extends StatelessWidget {
                   child: Center(
                     child: Column(
                       children: [
-                        SizedBox(height: 20.h),
+                        SizedBox(height: 15.h),
                         const CircleAvatar(
                           radius: 50,
                           backgroundColor: AppColors.success600,
@@ -114,14 +114,14 @@ class RegisterScreen extends StatelessWidget {
                         size: 80,
                       ),
                     ),
-                        SizedBox(height: 20.h),
+                        SizedBox(height: 15.h),
 
                         Text(
                           AppLocalizations.of(context)!.volunteer,
                           style: TextStyle(
                             fontSize: 24.sp,
                             fontWeight: FontWeight.bold,
-                            color: AppColors.primary400,
+                            color: AppColors.success600,
                           ),
                         ),
                         SizedBox(height: 20.h),
@@ -139,11 +139,11 @@ class RegisterScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 30.h),
+              SizedBox(height: 60.h),
               Text(
                 AppLocalizations.of(context)!.canChangeTypeLater,
                 style: TextStyle(
-                  fontSize: 15.sp,
+                  fontSize: 13.sp,
                   fontWeight: FontWeight.bold,
                   color: Colors.black54,
                 ),
