@@ -79,12 +79,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   TextButton(
-                    onPressed: () {Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const RegisterScreen(),
-                      ),
-                    );},
+                    onPressed: () {},
                     child: Text(AppLocalizations.of(context)!.forgotPassword),
                   ),
                 ],
@@ -95,9 +90,16 @@ class _LoginScreenState extends State<LoginScreen> {
                 backgroundColor: Colors.blue,
                 textColor: Colors.white,
                 text: AppLocalizations.of(context)!.login,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const RegisterScreen(),
+                    ),
+                  );
+                },
               ),
-              SizedBox(height: 15,),
+              SizedBox(height: 15),
               SizedBox(
                 height: 50,
                 child: Row(
@@ -117,14 +119,17 @@ class _LoginScreenState extends State<LoginScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(AppLocalizations.of(context)!.dontHaveAccount),
-                  TextButton(onPressed: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const CreateNewAccount(),
-                      ),
-                    );
-                  }, child: Text(AppLocalizations.of(context)!.createNewAccount)),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const CreateNewAccount(),
+                        ),
+                      );
+                    },
+                    child: Text(AppLocalizations.of(context)!.createNewAccount),
+                  ),
                 ],
               ),
             ],
