@@ -90,26 +90,19 @@ class _LoginScreenState extends State<LoginScreen> {
                 backgroundColor: Colors.blue,
                 textColor: Colors.white,
                 text: AppLocalizations.of(context)!.login,
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const RegisterScreen(),
-                    ),
-                  );
-                },
+                onPressed: () {},
               ),
-              SizedBox(height: 15),
+              SizedBox(height: 15.h),
               SizedBox(
-                height: 50,
+                height: 50.h,
                 child: Row(
                   children: [
                     Expanded(
-                      child: Divider(thickness: 0.6, color: Colors.black),
+                      child: Divider(thickness: 0.6.h, color: Colors.black),
                     ),
                     Text(AppLocalizations.of(context)!.or),
                     Expanded(
-                      child: Divider(thickness: 0.6, color: Colors.black),
+                      child: Divider(thickness: 0.6.h, color: Colors.black),
                     ),
                   ],
                 ),
