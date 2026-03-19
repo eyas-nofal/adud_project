@@ -24,7 +24,9 @@
   "forgotPassword": "Forgot Password?",
   "loginWithGoogle": "Login with Google",
   "loginWithFacebook": "Login with Facebook",
-  "dontHaveAccount": "Don't have an account? Create new account",
+  "dontHaveAccount": "Don't have an account?",
+  "createNewAccount": "Create new account",
+  "or": "OR",
   "loginAs": "Login as",
 
   "joinUsStartJourney": "Join us and start your journey",

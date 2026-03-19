@@ -1,4 +1,3 @@
-import 'package:adud_project/app.dart';
 import 'package:adud_project/providers/language_provider.dart';
 import 'package:adud_project/screens/auth/welcome_screen.dart';
 import 'package:adud_project/screens/core/constants/app_colors.dart';

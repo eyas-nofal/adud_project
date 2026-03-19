@@ -1,3 +1,4 @@
+import 'package:adud_project/screens/auth/register_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -41,7 +42,7 @@ class AppRoot extends StatelessWidget {
             textTheme: GoogleFonts.cairoTextTheme(Theme.of(context).textTheme),
           ),
 
-          home: const ChooseLanguageScreen(),
+          home: const RegisterScreen(),
         );
       },
     );

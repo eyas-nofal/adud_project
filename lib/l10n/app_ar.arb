@@ -25,7 +25,9 @@
   "forgotPassword": "نسيت كلمة المرور؟",
   "loginWithGoogle": "تسجيل الدخول بواسطة Google",
   "loginWithFacebook": "تسجيل الدخول بواسطة Facebook",
-  "dontHaveAccount": "ليس لديك حساب؟ إنشاء حساب جديد",
+  "dontHaveAccount": "ليس لديك حساب؟",
+  "createNewAccount": "إنشاء حساب جديد",
+  "or": "أو",
   "loginAs": "تسجيل الدخول كـ",
 
   "joinUsStartJourney": "انضم إلينا وابدأ رحلتك",
