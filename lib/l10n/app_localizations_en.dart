@@ -71,7 +71,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String get loginWithFacebook => 'Login with Facebook';
 
   @override
-  String get dontHaveAccount => 'Don\'t have an account? Create new account';
+  String get dontHaveAccount => 'Don\'t have an account?';
+
+  @override
+  String get createNewAccount => 'Create new account';
+
+  @override
+  String get or => 'OR';
 
   @override
   String get loginAs => 'Login as';

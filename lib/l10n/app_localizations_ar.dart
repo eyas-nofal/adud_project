@@ -71,7 +71,13 @@ class AppLocalizationsAr extends AppLocalizations {
   String get loginWithFacebook => 'تسجيل الدخول بواسطة Facebook';
 
   @override
-  String get dontHaveAccount => 'ليس لديك حساب؟ إنشاء حساب جديد';
+  String get dontHaveAccount => 'ليس لديك حساب؟';
+
+  @override
+  String get createNewAccount => 'إنشاء حساب جديد';
+
+  @override
+  String get or => 'أو';
 
   @override
   String get loginAs => 'تسجيل الدخول كـ';
