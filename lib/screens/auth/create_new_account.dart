@@ -3,6 +3,7 @@ import 'package:adud_project/screens/auth/login_screen.dart';
 import 'package:adud_project/screens/auth/register_screen.dart';
 import 'package:adud_project/screens/core/constants/app_colors.dart';
 import 'package:adud_project/screens/core/widgets/custom_button.dart';
+import 'package:adud_project/screens/core/widgets/custom_multi_select.dart';
 import 'package:adud_project/screens/core/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,9 +17,27 @@ class CreateNewAccount extends StatefulWidget {
 
 class _CreateNewAccountState extends State<CreateNewAccount> {
   bool _isAgreed = false;
+    List<String> selectedInterests = [];
 
   @override
   Widget build(BuildContext context) {
+    final List<SelectOption> myInterests = [
+     SelectOption(id: '1', label: AppLocalizations.of(context)!.amman),
+     SelectOption(id: '2', label: AppLocalizations.of(context)!.irbid),
+     SelectOption(id: '3', label: AppLocalizations.of(context)!.zarqa),
+     SelectOption(id: '4', label: AppLocalizations.of(context)!.salt),
+     SelectOption(id: '5', label: AppLocalizations.of(context)!.aqaba),
+     SelectOption(id: '6', label: AppLocalizations.of(context)!.madaba),
+     SelectOption(id: '7', label: AppLocalizations.of(context)!.jerash),
+     SelectOption(id: '8', label: AppLocalizations.of(context)!.ajloun),
+     SelectOption(id: '9', label: AppLocalizations.of(context)!.karak),
+     SelectOption(id: '10', label: AppLocalizations.of(context)!.tafilah),
+     SelectOption(id: '11', label: AppLocalizations.of(context)!.maan),
+     SelectOption(id: '12', label: AppLocalizations.of(context)!.mafraq),
+     SelectOption(id: '13', label: AppLocalizations.of(context)!.karak),
+
+
+  ];
     return Scaffold(
       backgroundColor: AppColors.primary100,
       body: SingleChildScrollView(
@@ -27,7 +46,7 @@ class _CreateNewAccountState extends State<CreateNewAccount> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 50.h),
+              SizedBox(height: 30.h),
 
               Center(
                 child: Column(
@@ -111,7 +130,16 @@ class _CreateNewAccountState extends State<CreateNewAccount> {
               ),
 
               SizedBox(height: 20.h),
-
+              MultiSelectDropdown(
+              label: AppLocalizations.of(context)!.selectCity,
+              options: myInterests,
+              selectedIds: selectedInterests,
+              onChanged: (newList) {
+                setState(() {
+                  selectedInterests = newList;
+                });
+              },
+            ),
               Row(
                 children: [
                   Checkbox(
@@ -143,12 +171,12 @@ class _CreateNewAccountState extends State<CreateNewAccount> {
                 textColor: Colors.white,
                 text: AppLocalizations.of(context)!.createAccount,
                 onPressed: () {
-                    Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const RegisterScreen(),
-                          ),
-                        );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const RegisterScreen(),
+                    ),
+                  );
                 },
               ),
 

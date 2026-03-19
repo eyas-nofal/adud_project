@@ -9,6 +9,51 @@ class AppLocalizationsAr extends AppLocalizations {
   AppLocalizationsAr([String locale = 'ar']) : super(locale);
 
   @override
+  String get amman => 'عمان';
+
+  @override
+  String get irbid => 'إربد';
+
+  @override
+  String get zarqa => 'الزرقاء';
+
+  @override
+  String get aqaba => 'العقبة';
+
+  @override
+  String get madaba => 'مادبا';
+
+  @override
+  String get salt => 'السلط';
+
+  @override
+  String get jerash => 'جرش';
+
+  @override
+  String get ajloun => 'عجلون';
+
+  @override
+  String get karak => 'الكرك';
+
+  @override
+  String get tafilah => 'الطفيلة';
+
+  @override
+  String get maan => 'معان';
+
+  @override
+  String get mafraq => 'المفرق';
+
+  @override
+  String get selectFromList => 'اختر من القائمة...';
+
+  @override
+  String get confirm => 'تأكيد';
+
+  @override
+  String get selectCity => 'اختر المدينة';
+
+  @override
   String get appName => 'عَضُد';
 
   @override
