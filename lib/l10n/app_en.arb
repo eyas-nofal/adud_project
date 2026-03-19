@@ -34,7 +34,7 @@
   "confirmPassword": "Confirm Password",
   "agreeToTerms": "I agree to the Terms & Conditions and Privacy Policy",
   "passwordMismatch": "Passwords do not match",
-  "alreadyHaveAccount": "Already have an account? Login",
+  "alreadyHaveAccount": "Already have an account?",
 
   "welcomeUser": "Welcome, {name}",
   "howCanWeHelp": "How can we help you today?",

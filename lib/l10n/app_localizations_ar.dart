@@ -98,7 +98,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get passwordMismatch => 'كلمات المرور غير متطابقة';
 
   @override
-  String get alreadyHaveAccount => 'لديك حساب بالفعل؟ تسجيل الدخول';
+  String get alreadyHaveAccount => 'لديك حساب بالفعل؟';
 
   @override
   String welcomeUser(Object name) {
