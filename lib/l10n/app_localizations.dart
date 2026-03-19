@@ -275,7 +275,7 @@ abstract class AppLocalizations {
   /// No description provided for @alreadyHaveAccount.
   ///
   /// In ar, this message translates to:
-  /// **'لديك حساب بالفعل؟ تسجيل الدخول'**
+  /// **'لديك حساب بالفعل؟'**
   String get alreadyHaveAccount;
 
   /// No description provided for @welcomeUser.
