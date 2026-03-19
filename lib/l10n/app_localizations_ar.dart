@@ -45,6 +45,12 @@ class AppLocalizationsAr extends AppLocalizations {
   String get mafraq => 'المفرق';
 
   @override
+  String get selectFromList => 'اختر من القائمة...';
+
+  @override
+  String get confirm => 'تأكيد';
+
+  @override
   String get selectCity => 'اختر المدينة';
 
   @override

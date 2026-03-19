@@ -45,6 +45,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get mafraq => 'Mafraq';
 
   @override
+  String get selectFromList => 'Select from list...';
+
+  @override
+  String get confirm => 'Confirm';
+
+  @override
   String get selectCity => 'Select City';
 
   @override

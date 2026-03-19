@@ -170,6 +170,18 @@ abstract class AppLocalizations {
   /// **'المفرق'**
   String get mafraq;
 
+  /// No description provided for @selectFromList.
+  ///
+  /// In ar, this message translates to:
+  /// **'اختر من القائمة...'**
+  String get selectFromList;
+
+  /// No description provided for @confirm.
+  ///
+  /// In ar, this message translates to:
+  /// **'تأكيد'**
+  String get confirm;
+
   /// No description provided for @selectCity.
   ///
   /// In ar, this message translates to:

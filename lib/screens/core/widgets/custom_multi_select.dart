@@ -1,4 +1,6 @@
+import 'package:adud_project/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SelectOption {
   final String id;
@@ -58,7 +60,7 @@ class MultiSelectDropdownState extends State<MultiSelectDropdown> {
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
               border: Border.all(color: Colors.grey.shade300),
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(12.r),
               color: Colors.grey.shade50,
             ),
             child: Row(
@@ -67,7 +69,7 @@ class MultiSelectDropdownState extends State<MultiSelectDropdown> {
                 Expanded(
                   child: widget.selectedIds.isEmpty
                       ? Text(
-                          "اختر من القائمة...",
+                          AppLocalizations.of(context)!.selectFromList,
                           style: TextStyle(color: Colors.grey.shade600),
                         )
                       : Wrap(
@@ -130,7 +132,7 @@ class MultiSelectDialogState extends State<MultiSelectDialog> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: const Text("اختر الاهتمامات"),
+      title: Text(AppLocalizations.of(context)!.selectCity),
       content: SingleChildScrollView(
         child: ListBody(
           children: widget.items.map((item) {
@@ -155,11 +157,11 @@ class MultiSelectDialogState extends State<MultiSelectDialog> {
       actions: [
         TextButton(
           onPressed: () => Navigator.pop(context),
-          child: const Text("إلغاء"),
+          child: Text(AppLocalizations.of(context)!.cancel),
         ),
         ElevatedButton(
           onPressed: () => Navigator.pop(context, selectedItems),
-          child: const Text("تأكيد"),
+          child: Text(AppLocalizations.of(context)!.confirm),
         ),
       ],
     );

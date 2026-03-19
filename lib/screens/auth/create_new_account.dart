@@ -17,15 +17,27 @@ class CreateNewAccount extends StatefulWidget {
 
 class _CreateNewAccountState extends State<CreateNewAccount> {
   bool _isAgreed = false;
-  final List<SelectOption> myInterests = [
-     SelectOption(id: '1', label: ""),
-    const SelectOption(id: '2', label: 'التصميم'),
-    const SelectOption(id: '3', label: 'الموسيقى'),
-    const SelectOption(id: '4', label: 'الرياضة'),
-  ];
-  List<String> selectedInterests = [];
+    List<String> selectedInterests = [];
+
   @override
   Widget build(BuildContext context) {
+    final List<SelectOption> myInterests = [
+     SelectOption(id: '1', label: AppLocalizations.of(context)!.amman),
+     SelectOption(id: '2', label: AppLocalizations.of(context)!.irbid),
+     SelectOption(id: '3', label: AppLocalizations.of(context)!.zarqa),
+     SelectOption(id: '4', label: AppLocalizations.of(context)!.salt),
+     SelectOption(id: '5', label: AppLocalizations.of(context)!.aqaba),
+     SelectOption(id: '6', label: AppLocalizations.of(context)!.madaba),
+     SelectOption(id: '7', label: AppLocalizations.of(context)!.jerash),
+     SelectOption(id: '8', label: AppLocalizations.of(context)!.ajloun),
+     SelectOption(id: '9', label: AppLocalizations.of(context)!.karak),
+     SelectOption(id: '10', label: AppLocalizations.of(context)!.tafilah),
+     SelectOption(id: '11', label: AppLocalizations.of(context)!.maan),
+     SelectOption(id: '12', label: AppLocalizations.of(context)!.mafraq),
+     SelectOption(id: '13', label: AppLocalizations.of(context)!.karak),
+
+
+  ];
     return Scaffold(
       backgroundColor: AppColors.primary100,
       body: SingleChildScrollView(
@@ -119,7 +131,7 @@ class _CreateNewAccountState extends State<CreateNewAccount> {
 
               SizedBox(height: 20.h),
               MultiSelectDropdown(
-              label: "اختر اهتماماتك",
+              label: AppLocalizations.of(context)!.selectCity,
               options: myInterests,
               selectedIds: selectedInterests,
               onChanged: (newList) {
