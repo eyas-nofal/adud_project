@@ -98,6 +98,84 @@ abstract class AppLocalizations {
     Locale('en'),
   ];
 
+  /// No description provided for @amman.
+  ///
+  /// In ar, this message translates to:
+  /// **'عمان'**
+  String get amman;
+
+  /// No description provided for @irbid.
+  ///
+  /// In ar, this message translates to:
+  /// **'إربد'**
+  String get irbid;
+
+  /// No description provided for @zarqa.
+  ///
+  /// In ar, this message translates to:
+  /// **'الزرقاء'**
+  String get zarqa;
+
+  /// No description provided for @aqaba.
+  ///
+  /// In ar, this message translates to:
+  /// **'العقبة'**
+  String get aqaba;
+
+  /// No description provided for @madaba.
+  ///
+  /// In ar, this message translates to:
+  /// **'مادبا'**
+  String get madaba;
+
+  /// No description provided for @salt.
+  ///
+  /// In ar, this message translates to:
+  /// **'السلط'**
+  String get salt;
+
+  /// No description provided for @jerash.
+  ///
+  /// In ar, this message translates to:
+  /// **'جرش'**
+  String get jerash;
+
+  /// No description provided for @ajloun.
+  ///
+  /// In ar, this message translates to:
+  /// **'عجلون'**
+  String get ajloun;
+
+  /// No description provided for @karak.
+  ///
+  /// In ar, this message translates to:
+  /// **'الكرك'**
+  String get karak;
+
+  /// No description provided for @tafilah.
+  ///
+  /// In ar, this message translates to:
+  /// **'الطفيلة'**
+  String get tafilah;
+
+  /// No description provided for @maan.
+  ///
+  /// In ar, this message translates to:
+  /// **'معان'**
+  String get maan;
+
+  /// No description provided for @mafraq.
+  ///
+  /// In ar, this message translates to:
+  /// **'المفرق'**
+  String get mafraq;
+
+  /// No description provided for @selectCity.
+  ///
+  /// In ar, this message translates to:
+  /// **'اختر المدينة'**
+  String get selectCity;
+
   /// No description provided for @appName.
   ///
   /// In ar, this message translates to:

@@ -9,6 +9,45 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
+  String get amman => 'Amman';
+
+  @override
+  String get irbid => 'Irbid';
+
+  @override
+  String get zarqa => 'Zarqa';
+
+  @override
+  String get aqaba => 'Aqaba';
+
+  @override
+  String get madaba => 'Madaba';
+
+  @override
+  String get salt => 'Salt';
+
+  @override
+  String get jerash => 'Jerash';
+
+  @override
+  String get ajloun => 'Ajloun';
+
+  @override
+  String get karak => 'Karak';
+
+  @override
+  String get tafilah => 'Tafilah';
+
+  @override
+  String get maan => 'Ma\'an';
+
+  @override
+  String get mafraq => 'Mafraq';
+
+  @override
+  String get selectCity => 'Select City';
+
+  @override
   String get appName => 'Adud';
 
   @override

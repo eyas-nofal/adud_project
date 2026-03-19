@@ -3,6 +3,7 @@ import 'package:adud_project/screens/auth/login_screen.dart';
 import 'package:adud_project/screens/auth/register_screen.dart';
 import 'package:adud_project/screens/core/constants/app_colors.dart';
 import 'package:adud_project/screens/core/widgets/custom_button.dart';
+import 'package:adud_project/screens/core/widgets/custom_multi_select.dart';
 import 'package:adud_project/screens/core/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,7 +17,13 @@ class CreateNewAccount extends StatefulWidget {
 
 class _CreateNewAccountState extends State<CreateNewAccount> {
   bool _isAgreed = false;
-
+  final List<SelectOption> myInterests = [
+     SelectOption(id: '1', label: ""),
+    const SelectOption(id: '2', label: 'التصميم'),
+    const SelectOption(id: '3', label: 'الموسيقى'),
+    const SelectOption(id: '4', label: 'الرياضة'),
+  ];
+  List<String> selectedInterests = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +34,7 @@ class _CreateNewAccountState extends State<CreateNewAccount> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 50.h),
+              SizedBox(height: 30.h),
 
               Center(
                 child: Column(
@@ -111,7 +118,16 @@ class _CreateNewAccountState extends State<CreateNewAccount> {
               ),
 
               SizedBox(height: 20.h),
-
+              MultiSelectDropdown(
+              label: "اختر اهتماماتك",
+              options: myInterests,
+              selectedIds: selectedInterests,
+              onChanged: (newList) {
+                setState(() {
+                  selectedInterests = newList;
+                });
+              },
+            ),
               Row(
                 children: [
                   Checkbox(
@@ -143,12 +159,12 @@ class _CreateNewAccountState extends State<CreateNewAccount> {
                 textColor: Colors.white,
                 text: AppLocalizations.of(context)!.createAccount,
                 onPressed: () {
-                    Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const RegisterScreen(),
-                          ),
-                        );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const RegisterScreen(),
+                    ),
+                  );
                 },
               ),
 
