@@ -221,9 +221,19 @@ abstract class AppLocalizations {
   /// No description provided for @dontHaveAccount.
   ///
   /// In ar, this message translates to:
-  /// **'ليس لديك حساب؟ إنشاء حساب جديد'**
+  /// **'ليس لديك حساب؟'**
   String get dontHaveAccount;
+
+  /// No description provided for @createNewAccount.
+  ///
+  /// In ar, this message translates to:
+  /// **'إنشاء حساب جديد'**
   String get createNewAccount;
+
+  /// No description provided for @or.
+  ///
+  /// In ar, this message translates to:
+  /// **'أو'**
   String get or;
 
   /// No description provided for @loginAs.

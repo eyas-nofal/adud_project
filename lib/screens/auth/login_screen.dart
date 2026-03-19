@@ -99,7 +99,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Expanded(
                       child: Divider(thickness: 0.6, color: Colors.black),
                     ),
-                    Text("OR"),
+                    Text(AppLocalizations.of(context)!.or),
                     Expanded(
                       child: Divider(thickness: 0.6, color: Colors.black),
                     ),
@@ -110,8 +110,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("ليس لديك حساب؟"),
-                  SizedBox(width: 2.w),
+                  Text(AppLocalizations.of(context)!.dontHaveAccount),
                   TextButton(onPressed: () {
                     Navigator.pushReplacement(
                       context,
@@ -119,7 +118,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         builder: (context) => const CreateNewAccount(),
                       ),
                     );
-                  }, child: Text("انشاء حساب جديد")),
+                  }, child: Text(AppLocalizations.of(context)!.createNewAccount)),
                 ],
               ),
             ],
