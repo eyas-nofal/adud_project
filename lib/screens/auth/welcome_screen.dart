@@ -5,6 +5,7 @@ import 'package:adud_project/providers/language_provider.dart';
 import 'package:adud_project/screens/auth/create_new_account.dart';
 import 'package:adud_project/screens/auth/login_screen.dart';
 import 'package:adud_project/screens/core/widgets/custom_button.dart';
+import 'package:adud_project/screens/core/widgets/custom_glass_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -29,14 +30,9 @@ class WelcomeScreen extends StatelessWidget {
             ),
           ),
           child: Row(
-            mainAxisSize:
-                MainAxisSize.min, 
+            mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(
-                Icons.language, 
-                color: Colors.white,
-                size: 20.sp,
-              ),
+              Icon(Icons.language, color: Colors.white, size: 20.sp),
               SizedBox(width: 8.w),
               Text(
                 AppLocalizations.of(context)!.changeLanguage,
@@ -55,6 +51,7 @@ class WelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final currentLocale = Localizations.localeOf(context);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -63,18 +60,33 @@ class WelcomeScreen extends StatelessWidget {
 
         leadingWidth: 200.w,
         leading: Padding(
-          padding: EdgeInsets.only(left: 20.w, top: 10.h),
+          padding: EdgeInsets.only(left: 1.w, top: 10.h),
           child: Center(
-            child: GestureDetector(
-              onTap: () {
-                context.read<LanguageProvider>().toggleLocale();
-              },
-              child: _buildGlassLanguageButton(context),
+            child: CustomGlassContainer(
+          onTab: () => context.read<LanguageProvider>().toggleLocale(),
+          size: 150, 
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 8.h),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(Icons.language, color: Colors.white, size: 20.sp),
+                SizedBox(width: 15.w),
+                Text(
+                  currentLocale.languageCode == 'en' ? 'العربية' : 'English',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ],
             ),
+          ),
           ),
         ),
       ),
-
+      ),
       backgroundColor: Colors.blue,
       body: Center(
         child: Padding(
@@ -82,31 +94,16 @@ class WelcomeScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(28.r),
-                child: BackdropFilter(
-                  filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-                  child: Container(
-                    width: 100.w,
-                    height: 100.w,
-                    decoration: BoxDecoration(
-                      color: Colors.white.withValues(alpha: 0.15),
-                      borderRadius: BorderRadius.circular(28.r),
-                      border: Border.all(
-                        color: Colors.white.withValues(alpha: 0.2),
-                        width: 1,
-                      ),
-                    ),
-                    child: Center(
-                      child: SvgPicture.asset(
-                        'assets/imgSVG/handheart.svg',
-                        width: 100.w,
-                        colorFilter: const ColorFilter.mode(
-                          Colors.white,
-                          BlendMode.srcIn,
-                        ),
-                      ),
-                    ),
+              CustomGlassContainer(
+                size: 100,
+                onTab: () {
+                },
+                child: SvgPicture.asset(
+                  'assets/imgSVG/handheart.svg',
+                  width: 100.w, 
+                  colorFilter: const ColorFilter.mode(
+                    Colors.white,
+                    BlendMode.srcIn,
                   ),
                 ),
               ),
@@ -174,10 +171,17 @@ class WelcomeScreen extends StatelessWidget {
                 },
               ),
               SizedBox(height: 40.h),
-              SvgPicture.asset('assets/imgSVG/heart1.svg', width: 30.w,color: Colors.white,),
+              SvgPicture.asset(
+                'assets/imgSVG/heart1.svg',
+                width: 30.w,
+                color: Colors.white,
+              ),
               SizedBox(height: 5.h),
 
-              Text(AppLocalizations.of(context)!.togetherWeMakeDifference,style: TextStyle(color: Colors.white),),
+              Text(
+                AppLocalizations.of(context)!.togetherWeMakeDifference,
+                style: TextStyle(color: Colors.white),
+              ),
             ],
           ),
         ),
