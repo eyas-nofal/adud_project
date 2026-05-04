@@ -30,7 +30,7 @@ class RegisterScreen extends StatelessWidget {
                 AppLocalizations.of(context)!.selectUserTypeSub,
                 style: TextStyle(fontSize: 15.sp, color: Colors.black),
               ),
-              SizedBox(height:60.h),
+              SizedBox(height: 60.h),
 
               SizedBox(
                 width: double.infinity,
@@ -108,12 +108,12 @@ class RegisterScreen extends StatelessWidget {
                         const CircleAvatar(
                           radius: 50,
                           backgroundColor: AppColors.success600,
-                        child: const Icon(
-                        Icons.favorite_border,
-                        color: Colors.white,
-                        size: 80,
-                      ),
-                    ),
+                          child: const Icon(
+                            Icons.favorite_border,
+                            color: Colors.white,
+                            size: 80,
+                          ),
+                        ),
                         SizedBox(height: 15.h),
 
                         Text(
@@ -140,14 +140,6 @@ class RegisterScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 60.h),
-              Text(
-                AppLocalizations.of(context)!.canChangeTypeLater,
-                style: TextStyle(
-                  fontSize: 13.sp,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black54,
-                ),
-              ),
             ],
           ),
         ),
