@@ -32,7 +32,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Text(
                       AppLocalizations.of(context)!.login,
                       style: TextStyle(
-                        fontSize: 25.sp,
+                        fontSize: 35.sp,
                         fontWeight: FontWeight.w700,
                         color: Colors.blue,
                       ),
@@ -106,7 +106,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ],
                 ),
               ),
-              SizedBox(height: 200.h),
+              SizedBox(height: 180.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -122,8 +122,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                     child: Text(AppLocalizations.of(context)!.createNewAccount),
                   ),
+
                 ],
               ),
+              
             ],
           ),
         ),
