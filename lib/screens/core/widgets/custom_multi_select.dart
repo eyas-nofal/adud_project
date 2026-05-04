@@ -132,34 +132,87 @@ class MultiSelectDialogState extends State<MultiSelectDialog> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: Text(AppLocalizations.of(context)!.selectCity),
-      content: SingleChildScrollView(
-        child: ListBody(
-          children: widget.items.map((item) {
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20),
+      ), // حواف دائرية للمودال
+      title: Text(
+        AppLocalizations.of(context)!.selectCity,
+        style: const TextStyle(fontWeight: FontWeight.bold),
+      ),
+      content: SizedBox(
+        width: double.maxFinite,
+        child: ListView.builder(
+          shrinkWrap: true,
+          itemCount: widget.items.length,
+          itemBuilder: (context, index) {
+            final item = widget.items[index];
             final isSelected = selectedItems.contains(item.id);
-            return CheckboxListTile(
-              value: isSelected,
-              title: Text(item.label),
-              controlAffinity: ListTileControlAffinity.leading,
-              onChanged: (bool? checked) {
-                setState(() {
-                  if (checked == true) {
-                    selectedItems.add(item.id);
-                  } else {
-                    selectedItems.remove(item.id);
-                  }
-                });
-              },
+
+            return Padding(
+              padding: const EdgeInsets.symmetric(vertical: 4.0),
+              child: AnimatedContainer(
+                duration: const Duration(milliseconds: 300),
+                decoration: BoxDecoration(
+                  color: Theme.of(context).primaryColor.withAlpha(25),
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: isSelected
+                        ? Theme.of(context).primaryColor
+                        : Colors.grey.shade300,
+                    width: 1.5,
+                  ),
+                ),
+                child: CheckboxListTile(
+                  value: isSelected,
+                  title: Text(
+                    item.label,
+                    style: TextStyle(
+                      fontWeight: isSelected
+                          ? FontWeight.bold
+                          : FontWeight.normal,
+                      color: isSelected
+                          ? Theme.of(context).primaryColor
+                          : Colors.black87,
+                    ),
+                  ),
+                  activeColor: Theme.of(context).primaryColor,
+                  checkColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  controlAffinity: ListTileControlAffinity
+                      .trailing, 
+                  visualDensity: VisualDensity.compact,
+                  onChanged: (bool? checked) {
+                    setState(() {
+                      if (checked == true) {
+                        selectedItems.add(item.id);
+                      } else {
+                        selectedItems.remove(item.id);
+                      }
+                    });
+                  },
+                ),
+              ),
             );
-          }).toList(),
+          },
         ),
       ),
       actions: [
         TextButton(
           onPressed: () => Navigator.pop(context),
-          child: Text(AppLocalizations.of(context)!.cancel),
+          child: Text(
+            AppLocalizations.of(context)!.cancel,
+            style: TextStyle(color: Colors.grey.shade600),
+          ),
         ),
         ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+            elevation: 0,
+          ),
           onPressed: () => Navigator.pop(context, selectedItems),
           child: Text(AppLocalizations.of(context)!.confirm),
         ),
