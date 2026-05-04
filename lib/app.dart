@@ -40,7 +40,7 @@ class AppRoot extends StatelessWidget {
             textTheme: GoogleFonts.cairoTextTheme(Theme.of(context).textTheme),
           ),
 
-          home: const ChooseLanguageScreen(),
+          home: const WelcomeScreen(),
         );
       },
     );

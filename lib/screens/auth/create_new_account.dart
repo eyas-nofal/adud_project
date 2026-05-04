@@ -17,11 +17,11 @@ class CreateNewAccount extends StatefulWidget {
 
 class _CreateNewAccountState extends State<CreateNewAccount> {
   bool _isAgreed = false;
-    List<String> selectedInterests = [];
+    List<String> selectedCity = [];
 
   @override
   Widget build(BuildContext context) {
-    final List<SelectOption> myInterests = [
+    final List<SelectOption> allCities = [
      SelectOption(id: '1', label: AppLocalizations.of(context)!.amman),
      SelectOption(id: '2', label: AppLocalizations.of(context)!.irbid),
      SelectOption(id: '3', label: AppLocalizations.of(context)!.zarqa),
@@ -132,11 +132,11 @@ class _CreateNewAccountState extends State<CreateNewAccount> {
               SizedBox(height: 20.h),
               MultiSelectDropdown(
               label: AppLocalizations.of(context)!.selectCity,
-              options: myInterests,
-              selectedIds: selectedInterests,
+              options: allCities,
+              selectedIds: selectedCity,
               onChanged: (newList) {
                 setState(() {
-                  selectedInterests = newList;
+                  selectedCity = newList;
                 });
               },
             ),
