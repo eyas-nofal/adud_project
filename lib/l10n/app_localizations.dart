@@ -715,6 +715,36 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'تسجيل الخروج'**
   String get logout;
+
+  /// No description provided for @forgotPasswordSubtitle.
+  ///
+  /// In ar, this message translates to:
+  /// **'لا تقلق، سنرسل لك رابط استعادة كلمة المرور'**
+  String get forgotPasswordSubtitle;
+
+  /// No description provided for @emailHint.
+  ///
+  /// In ar, this message translates to:
+  /// **'example@email.com'**
+  String get emailHint;
+
+  /// No description provided for @sendResetLink.
+  ///
+  /// In ar, this message translates to:
+  /// **'إرسال رابط الاستعادة'**
+  String get sendResetLink;
+
+  /// No description provided for @rememberPasswordLogin.
+  ///
+  /// In ar, this message translates to:
+  /// **'تذكرت كلمة المرور؟ تسجيل الدخول'**
+  String get rememberPasswordLogin;
+
+  /// No description provided for @forgotPasswordSupport.
+  ///
+  /// In ar, this message translates to:
+  /// **'إذا واجهت مشكلة في استعادة كلمة المرور يرجى التواصل مع الدعم الفني'**
+  String get forgotPasswordSupport;
 }
 
 class _AppLocalizationsDelegate

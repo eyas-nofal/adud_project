@@ -113,7 +113,7 @@
   "privacyPolicy": "سياسة الخصوصية",
   "termsAndConditions": "الشروط والأحكام",
   "helpSupport": "المساعدة والدعم",
-  "logout": "تسجيل الخروج"
+  "logout": "تسجيل الخروج",
   "forgotPasswordSubtitle": "لا تقلق، سنرسل لك رابط استعادة كلمة المرور",
   "emailHint": "example@email.com",
   "sendResetLink": "إرسال رابط الاستعادة",

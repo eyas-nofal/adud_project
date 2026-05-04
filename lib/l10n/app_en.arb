@@ -112,7 +112,7 @@
   "privacyPolicy": "Privacy Policy",
   "termsAndConditions": "Terms and Conditions",
   "helpSupport": "Help and Support",
-  "logout": "Logout"
+  "logout": "Logout",
   "forgotPasswordSubtitle": "Don’t worry, we will send you a password reset link",
   "emailHint": "example@email.com",
   "sendResetLink": "Send reset link",

@@ -323,4 +323,21 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get logout => 'Logout';
+
+  @override
+  String get forgotPasswordSubtitle =>
+      'Don’t worry, we will send you a password reset link';
+
+  @override
+  String get emailHint => 'example@email.com';
+
+  @override
+  String get sendResetLink => 'Send reset link';
+
+  @override
+  String get rememberPasswordLogin => 'Remember your password? Login';
+
+  @override
+  String get forgotPasswordSupport =>
+      'If you face any issue resetting your password, please contact support';
 }
