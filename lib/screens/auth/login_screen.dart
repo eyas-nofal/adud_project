@@ -1,5 +1,6 @@
 import 'package:adud_project/l10n/app_localizations.dart';
 import 'package:adud_project/screens/auth/create_new_account.dart';
+import 'package:adud_project/screens/auth/forgot_password_screen.dart';
 import 'package:adud_project/screens/core/constants/app_colors.dart';
 import 'package:adud_project/screens/core/widgets/custom_button.dart';
 import 'package:adud_project/screens/core/widgets/custom_text_field.dart';
@@ -78,7 +79,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ForgotPasswordScreen(),
+                        ),
+                      );
+                    },
                     child: Text(AppLocalizations.of(context)!.forgotPassword),
                   ),
                 ],
