@@ -7,7 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class ForgotPasswordScreen extends StatelessWidget {
   const ForgotPasswordScreen({super.key});
 
-  @override
+   @override
   Widget build(BuildContext context) {
     final loc = AppLocalizations.of(context)!;
 
@@ -17,7 +17,6 @@ class ForgotPasswordScreen extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(height: 30.h),
-
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: Row(
@@ -31,29 +30,26 @@ class ForgotPasswordScreen extends StatelessWidget {
                     child: CircleAvatar(
                       radius: 22.r,
                       backgroundColor: Colors.white,
-                      child: Icon(Icons.arrow_back_ios_new, size: 18),
+                      child: const Icon(
+                        Icons.arrow_back_ios_new,
+                        size: 18,
+                      ),
                     ),
                   ),
                 ],
               ),
             ),
-
             SizedBox(height: 60.h),
-
             Text(
               loc.forgotPassword,
               style: TextStyle(fontSize: 28.sp, fontWeight: FontWeight.bold),
             ),
-
             SizedBox(height: 10.h),
-
             Text(
-              "loc.forgotPasswordSubtitle",
+              loc.forgotPasswordSubtitle,
               style: TextStyle(fontSize: 14.sp, color: Colors.grey[700]),
             ),
-
             SizedBox(height: 30.h),
-
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: Container(
@@ -79,12 +75,10 @@ class ForgotPasswordScreen extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                       ),
                     ),
-
                     SizedBox(height: 10.h),
-
                     TextField(
                       decoration: InputDecoration(
-                        hintText: "loc.emailHint",
+                        hintText: loc.emailHint,
                         prefixIcon: const Icon(Icons.email_outlined),
                         filled: true,
                         fillColor: Colors.grey[100],
@@ -94,23 +88,19 @@ class ForgotPasswordScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-
                     SizedBox(height: 20.h),
-
                     CustomButton(
                       width: double.infinity,
                       height: 50,
                       backgroundColor: Colors.blue,
                       textColor: Colors.white,
-                      text: "loc.sendResetLink",
+                      text: loc.sendResetLink,
                       onPressed: () {},
                     ),
-
                     SizedBox(height: 15.h),
-
                     Center(
                       child: Text(
-                        "loc.rememberPasswordLogin",
+                        loc.rememberPasswordLogin,
                         style: TextStyle(
                           fontSize: 13.sp,
                           color: Colors.grey[600],
@@ -121,13 +111,11 @@ class ForgotPasswordScreen extends StatelessWidget {
                 ),
               ),
             ),
-
             const Spacer(),
-
             Padding(
               padding: EdgeInsets.only(bottom: 20.h),
               child: Text(
-                "loc.forgotPasswordSupport",
+                loc.forgotPasswordSupport,
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 12.sp, color: Colors.grey[600]),
               ),
