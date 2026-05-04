@@ -321,4 +321,21 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get logout => 'تسجيل الخروج';
+
+  @override
+  String get forgotPasswordSubtitle =>
+      'لا تقلق، سنرسل لك رابط استعادة كلمة المرور';
+
+  @override
+  String get emailHint => 'example@email.com';
+
+  @override
+  String get sendResetLink => 'إرسال رابط الاستعادة';
+
+  @override
+  String get rememberPasswordLogin => 'تذكرت كلمة المرور؟ تسجيل الدخول';
+
+  @override
+  String get forgotPasswordSupport =>
+      'إذا واجهت مشكلة في استعادة كلمة المرور يرجى التواصل مع الدعم الفني';
 }
