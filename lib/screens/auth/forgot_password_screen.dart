@@ -1,4 +1,5 @@
 import 'package:adud_project/l10n/app_localizations.dart';
+import 'package:adud_project/screens/auth/login_screen.dart';
 import 'package:adud_project/screens/core/constants/app_colors.dart';
 import 'package:adud_project/screens/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
@@ -94,12 +95,28 @@ class ForgotPasswordScreen extends StatelessWidget {
                     ),
                     SizedBox(height: 15.h),
                     Center(
-                      child: Text(
-                        AppLocalizations.of(context)!.rememberPasswordLogin,
-                        style: TextStyle(
-                          fontSize: 13.sp,
-                          color: Colors.grey[600],
-                        ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            AppLocalizations.of(context)!.rememberPasswordLogin,
+                            style: TextStyle(
+                              fontSize: 13.sp,
+                              color: Colors.grey[600],
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pop(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const LoginScreen(),
+                                ),
+                              );
+                            },
+                            child: Text(AppLocalizations.of(context)!.login),
+                          ),
+                        ],
                       ),
                     ),
                   ],

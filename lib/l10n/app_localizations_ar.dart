@@ -333,7 +333,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get sendResetLink => 'إرسال رابط الاستعادة';
 
   @override
-  String get rememberPasswordLogin => 'تذكرت كلمة المرور؟ تسجيل الدخول';
+  String get rememberPasswordLogin => 'تذكرت كلمة المرور؟';
 
   @override
   String get forgotPasswordSupport =>
