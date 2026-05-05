@@ -24,7 +24,7 @@ class _DisabilityHomeScreenState extends State<DisabilityHomeScreen> {
       body: Column(
         children: [
           CustomAppHeader(
-            title: " مرحبا اياس",
+            title: " مرحبا احمد",
             subTitle: "كيف يمكننا مساعدتك اليوم؟",
             notifications: 5,
             messages: 3,
