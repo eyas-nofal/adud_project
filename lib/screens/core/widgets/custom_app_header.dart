@@ -7,6 +7,8 @@ class CustomAppHeader extends StatelessWidget {
   final String title;
   final String subTitle;
   final int notifications;
+  final VoidCallback? onNotificationTap; // وظيفة الضغط للتنبيهات
+  final VoidCallback? onChatTap; // وظيفة الضغط للدردشة
   final int messages;
 
   const CustomAppHeader({
@@ -15,6 +17,8 @@ class CustomAppHeader extends StatelessWidget {
     required this.subTitle,
     this.notifications = 0,
     this.messages = 0,
+    this.onNotificationTap,
+    this.onChatTap,
   });
 
   @override
@@ -41,6 +45,7 @@ class CustomAppHeader extends StatelessWidget {
                 clipBehavior: Clip.none,
                 children: [
                   CustomGlassContainer(
+                    onTab: onNotificationTap, // نمرر الوظيفة هنا
                     size: 50,
                     borderRadius: 15.r,
                     child: Icon(Icons.notifications, color: Colors.white),
@@ -60,6 +65,7 @@ class CustomAppHeader extends StatelessWidget {
                 clipBehavior: Clip.none,
                 children: [
                   CustomGlassContainer(
+                    onTab: onChatTap, // نمرر الوظيفة هنا
                     size: 50,
                     borderRadius: 15.r,
                     child: Icon(Icons.chat_sharp, color: Colors.white),
@@ -110,7 +116,7 @@ class CustomAppHeader extends StatelessWidget {
         '$count',
         style: TextStyle(
           color: Colors.white,
-          fontSize: 12.sp, 
+          fontSize: 12.sp,
           fontWeight: FontWeight.bold,
         ),
         textAlign: TextAlign.center,
