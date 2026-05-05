@@ -1,8 +1,8 @@
 // Import the app's custom colors
 import 'package:adud_project/screens/core/constants/app_colors.dart';
-// Import Flutter's core UI toolkit (Material Design)
+// Import Flutter's core UI toolkit(Material Design)
 import 'package:flutter/material.dart';
-// Import flutter_screenutil for responsive sizing (scales UI elements based on screen size)
+// Import flutter_screenutil for responsive sizing(scales UI elements based on screen size)
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 // Import Google Fonts (using Cairo font here)
 import 'package:google_fonts/google_fonts.dart';
