@@ -20,25 +20,67 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
         children: [
           SingleChildScrollView(
             child: CustomAppHeader(
-              title: AppLocalizations.of(context)!
-                  .welcomeUser("Ahmad"),
-              subTitle: AppLocalizations.of(context)!
-                  .thanksForGiving,
+              title: AppLocalizations.of(context)!.welcomeUser("Ahmad"),
+              subTitle: AppLocalizations.of(context)!.thanksForGiving,
               notifications: 5,
               messages: 3,
             ),
           ),
           Expanded(
-            //child: SingleChildScrollView(
+            child: SingleChildScrollView(
               child: Padding(
                 padding: EdgeInsets.all(20.w),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [],
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          AppLocalizations.of(context)!.nearbyRequests,
+                          style: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.black,
+                          ),
+                        ),
+
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 10,
+                            vertical: 4,
+                          ),
+                          decoration: BoxDecoration(
+                            color: AppColors.success100,
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Text(
+                            "3 طلبات ",
+                            style: const TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w600,
+                              color: AppColors.success600,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    RequestCard(
+                      name: 'آية',
+                      category: 'تنقل ومواصلات',
+                      distance: '0.8 كم',
+                      time: 'الآن',
+                      duration: 'ساعة واحدة',
+                      price: 10.0, // هنا مررنا السعر، فستظهر الأيقونة الخضراء
+                      onAccept: () {
+                        print('تم قبول طلب آية');
+                      },
+                    ),
+                  ],
                 ),
               ),
             ),
-        //  ),
+          ),
         ],
       ),
     );
