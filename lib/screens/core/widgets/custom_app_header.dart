@@ -1,15 +1,14 @@
-// هذا الهيكل العام للـ Widget بدون الكود الكامل
-import 'package:adud_project/screens/core/widgets/custom_glass_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:adud_project/screens/core/widgets/custom_glass_container.dart';
 
 class CustomAppHeader extends StatelessWidget {
   final String title;
   final String subTitle;
   final int notifications;
-  final VoidCallback? onNotificationTap; // وظيفة الضغط للتنبيهات
-  final VoidCallback? onChatTap; // وظيفة الضغط للدردشة
   final int messages;
+  final VoidCallback? onNotificationTap;
+  final VoidCallback? onChatTap;
 
   const CustomAppHeader({
     super.key,
@@ -24,78 +23,29 @@ class CustomAppHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(
-        top: MediaQuery.of(context).padding.top + 20,
-        left: 20,
-        right: 20,
-        bottom: 30,
+      padding: EdgeInsets.fromLTRB(
+        20.w,
+        MediaQuery.of(context).padding.top + 20.h,
+        20.w,
+        30.h,
       ),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.blue,
-        borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(35),
-          bottomRight: Radius.circular(35),
-        ),
+        borderRadius: BorderRadius.vertical(bottom: Radius.circular(35)),
       ),
-      child: Column(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+          _buildTextSection(),
           Row(
             children: [
-              Stack(
-                clipBehavior: Clip.none,
-                children: [
-                  CustomGlassContainer(
-                    onTab: onNotificationTap, // نمرر الوظيفة هنا
-                    size: 50,
-                    borderRadius: 15.r,
-                    child: Icon(Icons.notifications, color: Colors.white),
-                  ),
-
-                  if (notifications > 0)
-                    Positioned(
-                      top: -5,
-                      right: -5,
-                      child: _buildNotificationBadge(notifications),
-                    ),
-                ],
+              _buildIconButton(
+                Icons.notifications,
+                notifications,
+                onNotificationTap,
               ),
               SizedBox(width: 13.w),
-
-              Stack(
-                clipBehavior: Clip.none,
-                children: [
-                  CustomGlassContainer(
-                    onTab: onChatTap, // نمرر الوظيفة هنا
-                    size: 50,
-                    borderRadius: 15.r,
-                    child: Icon(Icons.chat_sharp, color: Colors.white),
-                  ),
-                  if (messages > 0)
-                    Positioned(
-                      top: -5,
-                      right: -5,
-                      child: _buildNotificationBadge(messages),
-                    ),
-                ],
-              ),
-              const Spacer(),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Text(
-                    title,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 24.sp,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Text(
-                    subTitle,
-                    style: TextStyle(color: Colors.white70, fontSize: 16.sp),
-                  ),
-                ],
-              ),
+              _buildIconButton(Icons.chat_sharp, messages, onChatTap),
             ],
           ),
         ],
@@ -103,23 +53,66 @@ class CustomAppHeader extends StatelessWidget {
     );
   }
 
-  Widget _buildNotificationBadge(int count) {
+  Widget _buildTextSection() {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment
+          .start, 
+      children: [
+        Text(
+          title,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 24.sp,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        Text(
+          subTitle,
+          style: TextStyle(color: Colors.white70, fontSize: 16.sp),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildIconButton(IconData icon, int count, VoidCallback? onTap) {
+    return Stack(
+      clipBehavior: Clip.none,
+      children: [
+        CustomGlassContainer(
+          onTab: onTap,
+          size: 50,
+          borderRadius: 15.r,
+          child: Icon(icon, color: Colors.white),
+        ),
+        if (count > 0)
+          PositionedDirectional(
+            top: -5,
+            end: -5, // 'end' تغنيك عن حساب isRtl
+            child: _buildBadge(count),
+          ),
+      ],
+    );
+  }
+
+  Widget _buildBadge(int count) {
     return Container(
-      padding: EdgeInsets.all(4),
+      padding: const EdgeInsets.all(4),
       decoration: BoxDecoration(
         color: Colors.red,
         shape: BoxShape.circle,
-        border: Border.all(color: Colors.blue, width: 3),
+        border: Border.all(color: Colors.blue, width: 2),
       ),
-      constraints: BoxConstraints(minWidth: 18, minHeight: 18),
-      child: Text(
-        '$count',
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 12.sp,
-          fontWeight: FontWeight.bold,
+      constraints: const BoxConstraints(minWidth: 20, minHeight: 20),
+      child: Center(
+        child: Text(
+          '$count',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 10.sp,
+            fontWeight: FontWeight.bold,
+          ),
         ),
-        textAlign: TextAlign.center,
       ),
     );
   }
