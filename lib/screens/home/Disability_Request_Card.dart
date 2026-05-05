@@ -1,3 +1,4 @@
+import 'package:adud_project/screens/core/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -34,7 +35,7 @@ class DisabilityRequestCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(20.r),
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.1),
+              color: AppColors.secondary200,
               blurRadius: 10.r,
               spreadRadius: 2.r,
               offset: Offset(0, 4.h),
@@ -53,7 +54,7 @@ class DisabilityRequestCard extends StatelessWidget {
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     gradient: LinearGradient(
-                      colors: [Color(0xFF8A73FF), Color(0xFFB5A6FF)],
+                      colors: [AppColors.secondary600, AppColors.secondary400],
                       begin: Alignment.topRight,
                       end: Alignment.bottomLeft,
                     ),
@@ -109,7 +110,7 @@ class DisabilityRequestCard extends StatelessWidget {
                         Text(
                           '$price د.أ',
                           style: GoogleFonts.cairo(
-                            color: const Color(0xFF00C97B),
+                            color: AppColors.success600,
                             fontWeight: FontWeight.bold,
                             fontSize: 14.sp,
                           ),
@@ -117,7 +118,7 @@ class DisabilityRequestCard extends StatelessWidget {
                         SizedBox(width: 4.w),
                         const Icon(
                           Icons.attach_money,
-                          color: Color(0xFF00C97B),
+                          color: AppColors.success600,
                           size: 16,
                         ),
                       ],
@@ -149,7 +150,7 @@ class DisabilityRequestCard extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12.r),
                 gradient: const LinearGradient(
-                  colors: [Color(0xFF00D28E), Color(0xFF2E8CFF)],
+                  colors: [AppColors.success400, AppColors.primary600],
                   begin: Alignment.centerRight,
                   end: Alignment.centerLeft,
                 ),
