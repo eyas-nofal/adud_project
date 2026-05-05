@@ -1,6 +1,7 @@
 import 'package:adud_project/l10n/app_localizations.dart';
 import 'package:adud_project/screens/core/constants/app_colors.dart';
 import 'package:adud_project/screens/home/disability_home_screen.dart';
+import 'package:adud_project/screens/home/volunteer_home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -98,7 +99,14 @@ class RegisterScreen extends StatelessWidget {
                 width: double.infinity,
                 height: 220.h,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const VolunteerHomeScreen(),
+                    ),
+                  );
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.neutral100,
                     foregroundColor: Colors.black,

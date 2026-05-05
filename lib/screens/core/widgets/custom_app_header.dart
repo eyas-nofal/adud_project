@@ -92,7 +92,7 @@ class CustomAppHeader extends StatelessWidget {
                   ),
                   Text(
                     subTitle,
-                    style: TextStyle(color: Colors.white70, fontSize: 16.sp),
+                    style: TextStyle(color: Colors.white70, fontSize: 15.sp),
                   ),
                 ],
               ),
