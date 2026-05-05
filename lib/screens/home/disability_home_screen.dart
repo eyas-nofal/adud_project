@@ -35,8 +35,8 @@ class _DisabilityHomeScreenState extends State<DisabilityHomeScreen> {
                     AppLocalizations.of(context)!.nearbyAccessiblePlaces,
                     style: TextStyle(fontSize: 22),
                   ),
-                  SizedBox(height: 15.h),
 
+                  SizedBox(height: 20.h),
                   // داخل الـ Column في صفحة الهوم
                   SizedBox(
                     height: 130, // ارتفاع كافي للدوائر والنصوص تحتها
@@ -53,7 +53,7 @@ class _DisabilityHomeScreenState extends State<DisabilityHomeScreen> {
                       },
                     ),
                   ),
-                    HelpRequestButton(
+                  HelpRequestButton(
                     onTap: () {
                       // هنا ممكن تفتح صفحة الاتصال أو الفورم
                     },
