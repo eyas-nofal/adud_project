@@ -9,7 +9,7 @@ class AppLoader extends StatelessWidget {
   const AppLoader({
     super.key, 
     this.size = 50.0, 
-    this.color = Colors.blue, // يمكنك وضع لون تطبيقك الأساسي هنا
+    this.color = Colors.blue, 
   });
 
   @override
@@ -18,7 +18,7 @@ class AppLoader extends StatelessWidget {
       child: SpinKitDualRing(
         color: color,
         size: size.w,
-        lineWidth: 3.0, // سُمك الحلقة
+        lineWidth: 3.0, 
       ),
     );
   }
