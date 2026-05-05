@@ -737,7 +737,7 @@ abstract class AppLocalizations {
   /// No description provided for @rememberPasswordLogin.
   ///
   /// In ar, this message translates to:
-  /// **'تذكرت كلمة المرور؟ تسجيل الدخول'**
+  /// **'تذكرت كلمة المرور؟'**
   String get rememberPasswordLogin;
 
   /// No description provided for @forgotPasswordSupport.

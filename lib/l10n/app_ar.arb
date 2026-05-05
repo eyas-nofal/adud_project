@@ -117,6 +117,6 @@
   "forgotPasswordSubtitle": "لا تقلق، سنرسل لك رابط استعادة كلمة المرور",
   "emailHint": "example@email.com",
   "sendResetLink": "إرسال رابط الاستعادة",
-  "rememberPasswordLogin": "تذكرت كلمة المرور؟ تسجيل الدخول",
+  "rememberPasswordLogin": "تذكرت كلمة المرور؟",
   "forgotPasswordSupport": "إذا واجهت مشكلة في استعادة كلمة المرور يرجى التواصل مع الدعم الفني"
 }

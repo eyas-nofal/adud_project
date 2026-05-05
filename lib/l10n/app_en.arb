@@ -116,7 +116,7 @@
   "forgotPasswordSubtitle": "Don’t worry, we will send you a password reset link",
   "emailHint": "example@email.com",
   "sendResetLink": "Send reset link",
-  "rememberPasswordLogin": "Remember your password? Login",
+  "rememberPasswordLogin": "Remember your password?",
   "forgotPasswordSupport": "If you face any issue resetting your password, please contact support",
   "forgotPasswordTitle": "Forgot Password"
 }

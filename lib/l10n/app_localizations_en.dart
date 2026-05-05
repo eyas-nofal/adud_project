@@ -335,7 +335,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get sendResetLink => 'Send reset link';
 
   @override
-  String get rememberPasswordLogin => 'Remember your password? Login';
+  String get rememberPasswordLogin => 'Remember your password?';
 
   @override
   String get forgotPasswordSupport =>
