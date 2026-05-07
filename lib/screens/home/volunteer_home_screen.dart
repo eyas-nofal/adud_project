@@ -1,7 +1,10 @@
+import 'dart:ffi';
+
 import 'package:adud_project/l10n/app_localizations.dart';
 import 'package:adud_project/screens/core/constants/app_colors.dart';
 import 'package:adud_project/screens/core/widgets/custom_app_header.dart';
 import 'package:adud_project/screens/core/widgets/Disability_Request_Card.dart';
+import 'package:adud_project/screens/core/widgets/custom_reward_offerds.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -40,7 +43,7 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
                         Text(
                           AppLocalizations.of(context)!.nearbyRequests,
                           style: const TextStyle(
-                            fontSize: 16,
+                            fontSize: 20,
                             fontWeight: FontWeight.w600,
                             color: Colors.black,
                           ),
@@ -66,6 +69,7 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
                         ),
                       ],
                     ),
+                    SizedBox(height: 15.w),
                     DisabilityRequestCard(
                       name: 'آية',
                       category: 'تنقل ومواصلات',
@@ -73,8 +77,7 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
                       time: 'الآن',
                       duration: 'ساعة واحدة',
                       price: 10.0, // هنا مررنا السعر، فستظهر الأيقونة الخضراء
-                      onAccept: () {
-                      },
+                      onAccept: () {},
                     ),
                     DisabilityRequestCard(
                       name: 'عمر',
@@ -83,7 +86,50 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
                       time: 'بعد ساعة',
                       duration: 'ساعتان',
                       // لم نقم بتمرير المتغير price هنا، لذلك لن تظهر أيقونة الدفع
-                      onAccept: () {
+                      onAccept: () {},
+                    ),
+                    SizedBox(height: 15.w),
+                    Row(
+                      children: [
+                        const Icon(
+                          Icons.celebration_outlined, // أو Icons.redeem
+                          color: Colors.purpleAccent,
+                          size: 28,
+                        ),
+                        SizedBox(width: 15.w),
+                        Text(
+                          AppLocalizations.of(context)!.rewardOffers,
+                          style: const TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 15.w),
+                    // هنا يمكنك إضافة قائمة بالعروض أو المكافآت المتاحة للمتطوعين
+                    CustomRewardCard(
+                      userPoints: 150,
+                      reward: RewardModel(
+                        titleAr: "قسيمة خصم للمتجر الصحي",
+                        titleEn: "Healthy Store Discount",
+                        pointsRequired: 100,
+                        iconPath: "🍕",
+                      ),
+                      onRedeem: () {},
+                    ),
+                    SizedBox(height: 12.h),
+                    CustomRewardCard(
+                      userPoints: 150, // نقاط المستخدم الحالية
+                      reward: RewardModel(
+                        titleAr: "اشتراك شهر مجاني في النادي",
+                        titleEn: "Free month gym membership",
+                        pointsRequired: 200,
+                        iconPath: "❤️",
+                      ),
+                      onRedeem: () {
+                        // هذا الكود لن يُنفذ لأن الزر معطل (null) برمجياً داخل الكلاس
                       },
                     ),
                   ],
