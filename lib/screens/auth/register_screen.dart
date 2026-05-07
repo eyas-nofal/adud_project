@@ -1,9 +1,12 @@
 import 'package:adud_project/l10n/app_localizations.dart';
+import 'package:adud_project/layout/main_layout.dart';
+import 'package:adud_project/providers/navigation_provider.dart';
 import 'package:adud_project/screens/core/constants/app_colors.dart';
 import 'package:adud_project/screens/home/disability_home_screen.dart';
 import 'package:adud_project/screens/home/volunteer_home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provider/provider.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
@@ -39,12 +42,14 @@ class RegisterScreen extends StatelessWidget {
                 height: 220.h,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const DisabilityHomeScreen(),
-                    ),
-                  );
+                    Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const MainLayout(),
+                      ),
+                      (route) =>
+                          false, // هذا السطر يمسح صفحات الترحيب من الذاكرة لضمان عدم الرجوع لها
+                    );
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.neutral100,
@@ -100,12 +105,20 @@ class RegisterScreen extends StatelessWidget {
                 height: 220.h,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const VolunteerHomeScreen(),
-                    ),
-                  );
+                    // 1. تحديث النوع في البروفايدر
+                    Provider.of<NavigationProvider>(
+                      context,
+                      listen: false,
+                    ).updateUserRole(UserRole.volunteer);
+
+                    // 2. الانتقال للـ Layout الموحد
+                    Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const MainLayout(),
+                      ),
+                      (route) => false,
+                    );
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.neutral100,
@@ -124,7 +137,7 @@ class RegisterScreen extends StatelessWidget {
                         const CircleAvatar(
                           radius: 50,
                           backgroundColor: AppColors.success600,
-                          child: const Icon(
+                          child: Icon(
                             Icons.favorite_border,
                             color: Colors.white,
                             size: 80,

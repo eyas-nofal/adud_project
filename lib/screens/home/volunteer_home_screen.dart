@@ -1,7 +1,7 @@
 import 'package:adud_project/l10n/app_localizations.dart';
 import 'package:adud_project/screens/core/constants/app_colors.dart';
 import 'package:adud_project/screens/core/widgets/custom_app_header.dart';
-import 'package:adud_project/screens/home/Disability_Request_Card.dart';
+import 'package:adud_project/screens/core/widgets/Disability_Request_Card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -74,7 +74,6 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
                       duration: 'ساعة واحدة',
                       price: 10.0, // هنا مررنا السعر، فستظهر الأيقونة الخضراء
                       onAccept: () {
-                        print('تم قبول طلب آية');
                       },
                     ),
                     DisabilityRequestCard(
@@ -85,7 +84,6 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
                       duration: 'ساعتان',
                       // لم نقم بتمرير المتغير price هنا، لذلك لن تظهر أيقونة الدفع
                       onAccept: () {
-                        print('تم قبول طلب محمد');
                       },
                     ),
                   ],
