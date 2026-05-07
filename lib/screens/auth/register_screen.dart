@@ -1,4 +1,5 @@
 import 'package:adud_project/l10n/app_localizations.dart';
+import 'package:adud_project/layout/main_layout.dart';
 import 'package:adud_project/screens/core/constants/app_colors.dart';
 import 'package:adud_project/screens/home/disability_home_screen.dart';
 import 'package:adud_project/screens/home/volunteer_home_screen.dart';
@@ -39,12 +40,14 @@ class RegisterScreen extends StatelessWidget {
                 height: 220.h,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const DisabilityHomeScreen(),
-                    ),
-                  );
+                    Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const MainLayout(),
+                      ),
+                      (route) =>
+                          false, // هذا السطر يمسح صفحات الترحيب من الذاكرة لضمان عدم الرجوع لها
+                    );
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.neutral100,
@@ -101,11 +104,11 @@ class RegisterScreen extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const VolunteerHomeScreen(),
-                    ),
-                  );
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const VolunteerHomeScreen(),
+                      ),
+                    );
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.neutral100,

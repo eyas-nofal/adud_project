@@ -222,7 +222,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get navHonorRoll => 'Honor Roll';
 
   @override
-  String get thanksForGiving => 'Thank you for your continuous giving';
+  String get thanksForGiving => 'Thank you for your support';
 
   @override
   String get rewardPoints => 'Reward Points';
