@@ -745,6 +745,8 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'إذا واجهت مشكلة في استعادة كلمة المرور يرجى التواصل مع الدعم الفني'**
   String get forgotPasswordSupport;
+
+  String get Points => null;
 }
 
 class _AppLocalizationsDelegate
