@@ -38,10 +38,10 @@ class _DisabilityHomeScreenState extends State<DisabilityHomeScreen> {
                     style: TextStyle(fontSize: 22),
                   ),
 
-                  SizedBox(height: 20.h),
+                  SizedBox(height: 15.h),
                   // داخل الـ Column في صفحة الهوم
                   SizedBox(
-                    height: 130, // ارتفاع كافي للدوائر والنصوص تحتها
+                    height: 110, // ارتفاع كافي للدوائر والنصوص تحتها
                     child: ListView.builder(
                       scrollDirection: Axis.horizontal,
                       reverse: true, // عشان يبلش من اليمين لليسار (عربي)
@@ -60,33 +60,32 @@ class _DisabilityHomeScreenState extends State<DisabilityHomeScreen> {
                       // هنا ممكن تفتح صفحة الاتصال أو الفورم
                     },
                   ),
-                  // البطاقة الأولى (نشطة)
-HelpCardWidget(
-  request: HelpRequestModel(
-    id: "1",
-    title: "تنقل ومواصلات",
-    userName: "أحمد",
-    duration: "المدة: 1 ساعة",
-    timeInfo: "جارية منذ 16 دقيقة",
-    status: HelpStatus.active,
-    themeColor: 0xFF2196F3,
-    icon: Icons.people,
-  ),
-),
+                  HelpCardWidget(
+                    request: HelpRequestModel(
+                      id: "1",
+                      title: "تنقل ومواصلات",
+                      userName: "أحمد",
+                      duration: "المدة: 1 ساعة",
+                      timeInfo: "جارية منذ 16 دقيقة",
+                      status: HelpStatus.active,
+                      themeColor: 0xFF2196F3,
+                      icon: Icons.people,
+                    ),
+                  ),
 
-// البطاقة الثانية (قادمة)
-HelpCardWidget(
-  request: HelpRequestModel(
-    id: "2",
-    title: "مرافقة",
-    userName: "ليان",
-    duration: "المدة: 3 ساعات",
-    timeInfo: "بعد 1 ساعة",
-    status: HelpStatus.upcoming,
-    themeColor: 0xFF9C27B0, //
-    icon: Icons.people,
-  ),
-),
+                  // البطاقة الثانية (قادمة)
+                  HelpCardWidget(
+                    request: HelpRequestModel(
+                      id: "2",
+                      title: "مرافقة",
+                      userName: "ليان",
+                      duration: "المدة: 3 ساعات",
+                      timeInfo: "بعد 1 ساعة",
+                      status: HelpStatus.upcoming,
+                      themeColor: 0xFF9C27B0, //
+                      icon: Icons.people,
+                    ),
+                  ),
                 ],
               ),
             ),
