@@ -74,7 +74,6 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
                       duration: 'ساعة واحدة',
                       price: 10.0, // هنا مررنا السعر، فستظهر الأيقونة الخضراء
                       onAccept: () {
-                        print('تم قبول طلب آية');
                       },
                     ),
                     DisabilityRequestCard(
@@ -85,7 +84,6 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
                       duration: 'ساعتان',
                       // لم نقم بتمرير المتغير price هنا، لذلك لن تظهر أيقونة الدفع
                       onAccept: () {
-                        print('تم قبول طلب محمد');
                       },
                     ),
                   ],
