@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:adud_project/l10n/app_localizations.dart';
 import 'package:adud_project/screens/core/constants/app_colors.dart';
 import 'package:adud_project/screens/core/widgets/custom_app_header.dart';
@@ -40,7 +42,7 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
                         Text(
                           AppLocalizations.of(context)!.nearbyRequests,
                           style: const TextStyle(
-                            fontSize: 16,
+                            fontSize: 20,
                             fontWeight: FontWeight.w600,
                             color: Colors.black,
                           ),
@@ -66,6 +68,7 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
                         ),
                       ],
                     ),
+                    SizedBox(height: 15.w),
                     DisabilityRequestCard(
                       name: 'آية',
                       category: 'تنقل ومواصلات',
@@ -73,8 +76,7 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
                       time: 'الآن',
                       duration: 'ساعة واحدة',
                       price: 10.0, // هنا مررنا السعر، فستظهر الأيقونة الخضراء
-                      onAccept: () {
-                      },
+                      onAccept: () {},
                     ),
                     DisabilityRequestCard(
                       name: 'عمر',
@@ -83,8 +85,26 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
                       time: 'بعد ساعة',
                       duration: 'ساعتان',
                       // لم نقم بتمرير المتغير price هنا، لذلك لن تظهر أيقونة الدفع
-                      onAccept: () {
-                      },
+                      onAccept: () {},
+                    ),
+                    SizedBox(height: 15.w),
+                    Row(
+                      children: [
+                        const Icon(
+                          Icons.celebration_outlined, // أو Icons.redeem
+                          color: Colors.purpleAccent,
+                          size: 28,
+                        ),
+                        SizedBox(width: 15.w),
+                        Text(
+                          AppLocalizations.of(context)!.rewardOffers,
+                          style: const TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
