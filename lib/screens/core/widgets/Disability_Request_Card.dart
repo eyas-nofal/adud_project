@@ -41,7 +41,7 @@ class DisabilityRequestCard extends StatelessWidget {
       // Main container representing the white card
       child: Container(
         // Outer margin (.h for responsive height, .w for responsive width)
-        margin: EdgeInsets.symmetric(vertical: 8.h, horizontal: 16.w),
+        margin: EdgeInsets.symmetric(vertical: 8.h, horizontal: 1.w),
         // Inner padding to keep content away from the edges
         padding: EdgeInsets.all(16.w),
         
