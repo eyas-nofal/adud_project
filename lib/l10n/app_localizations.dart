@@ -548,6 +548,12 @@ abstract class AppLocalizations {
   /// **'استبدل'**
   String get redeem;
 
+  /// No description provided for @points.
+  ///
+  /// In ar, this message translates to:
+  /// **'نقطة'**
+  String get points;
+
   /// No description provided for @completedHelp.
   ///
   /// In ar, this message translates to:
@@ -745,8 +751,6 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'إذا واجهت مشكلة في استعادة كلمة المرور يرجى التواصل مع الدعم الفني'**
   String get forgotPasswordSupport;
-
-  String get Points => null;
 }
 
 class _AppLocalizationsDelegate

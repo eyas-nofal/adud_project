@@ -238,6 +238,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get redeem => 'استبدل';
 
   @override
+  String get points => 'نقطة';
+
+  @override
   String get completedHelp => 'مساعدة مكتملة';
 
   @override
