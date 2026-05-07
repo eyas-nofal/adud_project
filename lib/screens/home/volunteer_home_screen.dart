@@ -4,6 +4,7 @@ import 'package:adud_project/l10n/app_localizations.dart';
 import 'package:adud_project/screens/core/constants/app_colors.dart';
 import 'package:adud_project/screens/core/widgets/custom_app_header.dart';
 import 'package:adud_project/screens/core/widgets/Disability_Request_Card.dart';
+import 'package:adud_project/screens/core/widgets/custom_reward_offerds.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -105,6 +106,31 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
                           ),
                         ),
                       ],
+                    ),
+                    SizedBox(height: 15.w),
+                    // هنا يمكنك إضافة قائمة بالعروض أو المكافآت المتاحة للمتطوعين
+                    CustomRewardCard(
+                      userPoints: 150,
+                      reward: RewardModel(
+                        titleAr: "قسيمة خصم للمتجر الصحي",
+                        titleEn: "Healthy Store Discount",
+                        pointsRequired: 100,
+                        iconPath: "🍕",
+                      ),
+                      onRedeem: () {},
+                    ),
+                    SizedBox(height: 12.h),
+                    CustomRewardCard(
+                      userPoints: 150, // نقاط المستخدم الحالية
+                      reward: RewardModel(
+                        titleAr: "اشتراك شهر مجاني في النادي",
+                        titleEn: "Free month gym membership",
+                        pointsRequired: 200,
+                        iconPath: "❤️",
+                      ),
+                      onRedeem: () {
+                        // هذا الكود لن يُنفذ لأن الزر معطل (null) برمجياً داخل الكلاس
+                      },
                     ),
                   ],
                 ),
