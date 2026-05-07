@@ -1,8 +1,8 @@
 // Import the app's custom colors
 import 'package:adud_project/screens/core/constants/app_colors.dart';
-// Import Flutter's core UI toolkit(Material Design)
+// Import Flutter's core UI toolkit (Material Design)
 import 'package:flutter/material.dart';
-// Import flutter_screenutil for responsive sizing(scales UI elements based on screen size)
+// Import flutter_screenutil for responsive sizing (scales UI elements based on screen size)
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 // Import Google Fonts (using Cairo font here)
 import 'package:google_fonts/google_fonts.dart';
@@ -15,8 +15,9 @@ class DisabilityRequestCard extends StatelessWidget {
   final String distance;  // Distance
   final String time;      // Time
   final String duration;  // Duration
-  final double? price;    // Price (The '?' means it can be null if the request is free)
+  final double? price;     // Price (The '?' means it can be null if the request is free)
   final VoidCallback onAccept; // Callback function executed when the accept button is pressed
+
 
   // --- Constructor: Initializes the card with the required data ---
   const DisabilityRequestCard({
@@ -40,7 +41,7 @@ class DisabilityRequestCard extends StatelessWidget {
       // Main container representing the white card
       child: Container(
         // Outer margin (.h for responsive height, .w for responsive width)
-        margin: EdgeInsets.symmetric(vertical: 8.h, horizontal: 1.w),
+        margin: EdgeInsets.symmetric(vertical: 8.h, horizontal: 16.w),
         // Inner padding to keep content away from the edges
         padding: EdgeInsets.all(16.w),
         
