@@ -54,14 +54,3 @@ class CustomButton extends StatelessWidget {
 }
 
 
-/*
-CustomButton(
-  width: 370,
-  height: 105,
-  backgroundColor: Colors.white,
-  textColor: Colors.black,
-  text: "Omar Dandis",
-  onPressed: () {
-  },
-),
-*/
