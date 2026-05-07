@@ -15,8 +15,9 @@ class DisabilityRequestCard extends StatelessWidget {
   final String distance;  // Distance
   final String time;      // Time
   final String duration;  // Duration
-  final double? price;    // Price (The '?' means it can be null if the request is free)
+  final double? price;     // Price (The '?' means it can be null if the request is free)
   final VoidCallback onAccept; // Callback function executed when the accept button is pressed
+
 
   // --- Constructor: Initializes the card with the required data ---
   const DisabilityRequestCard({
