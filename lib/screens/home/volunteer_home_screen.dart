@@ -66,6 +66,7 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
                         ),
                       ],
                     ),
+                    SizedBox(height: 15.h), // مسافة بين العنوان والطلبات
                     DisabilityRequestCard(
                       name: 'آية',
                       category: 'تنقل ومواصلات',
@@ -73,8 +74,7 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
                       time: 'الآن',
                       duration: 'ساعة واحدة',
                       price: 10.0, // هنا مررنا السعر، فستظهر الأيقونة الخضراء
-                      onAccept: () {
-                      },
+                      onAccept: () {},
                     ),
                     DisabilityRequestCard(
                       name: 'عمر',
@@ -83,8 +83,35 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
                       time: 'بعد ساعة',
                       duration: 'ساعتان',
                       // لم نقم بتمرير المتغير price هنا، لذلك لن تظهر أيقونة الدفع
-                      onAccept: () {
-                      },
+                      onAccept: () {},
+                    ),
+                    SizedBox(height: 15.h), // مسافة بين القسم الأول والثاني
+                    Row(
+                      children: [
+                        // أيقونة الهدية باللون البنفسجي
+                        const Icon(
+                          Icons.celebration, // أو Icons.redeem
+                          color: Colors.purpleAccent,
+                          size: 28,
+                        ),
+                        const SizedBox(
+                          width: 8,
+                        ), // مسافة بسيطة بين الأيقونة والنص
+                        // النص مع الستايل الملون
+                        Text(
+                          'عروض المكافآت',
+                          style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                            // هنا سوينا التدرج اللوني الخفيف اللي بالصورة (كحلي مع حدود برتقالية خفيفة)
+                            foreground: Paint()
+                              ..style = PaintingStyle.fill
+                              ..color = const Color(
+                                0xFF1A4A9E,
+                              ), // لون أزرق غامق كحلي
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
