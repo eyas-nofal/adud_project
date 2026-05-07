@@ -1,3 +1,5 @@
+import 'package:adud_project/l10n/app_localizations.dart';
+import 'package:adud_project/l10n/app_localizations_ar.dart';
 import 'package:adud_project/providers/navigation_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -28,19 +30,19 @@ class CustomBottomNavBar extends StatelessWidget {
           BottomNavigationBarItem(
             icon: const Icon(Icons.home_outlined),
             activeIcon: _buildActiveBox(Icons.home), // الشكل المظلل في الصورة
-            label: 'الرئيسية',
+            label: AppLocalizations.of(context)!.navHome,
           ),
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.recycling_outlined),
-            label: 'التبرع',
+          BottomNavigationBarItem(
+            icon: const Icon(Icons.recycling_outlined),
+            label: AppLocalizations.of(context)!.navDonate,
           ),
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.school_outlined),
-            label: 'الورش',
+          BottomNavigationBarItem(
+            icon: const Icon(Icons.school_outlined),
+            label: AppLocalizations.of(context)!.navWorkshops,
           ),
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline),
-            label: 'حسابي',
+          BottomNavigationBarItem(
+            icon: const Icon(Icons.person_outline),
+            label: AppLocalizations.of(context)!.navProfile,
           ),
         ],
       ),
