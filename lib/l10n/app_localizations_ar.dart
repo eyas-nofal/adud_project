@@ -374,4 +374,11 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get backButton => 'زر العودة';
+
+  @override
+  String get comingSoon => 'قريباً';
+
+  @override
+  String get pageNotAvailable =>
+      'هذه الصفحة قيد التطوير حالياً، يرجى التحقق لاحقاً.';
 }

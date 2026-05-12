@@ -817,6 +817,18 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'زر العودة'**
   String get backButton;
+
+  /// No description provided for @comingSoon.
+  ///
+  /// In ar, this message translates to:
+  /// **'قريباً'**
+  String get comingSoon;
+
+  /// No description provided for @pageNotAvailable.
+  ///
+  /// In ar, this message translates to:
+  /// **'هذه الصفحة قيد التطوير حالياً، يرجى التحقق لاحقاً.'**
+  String get pageNotAvailable;
 }
 
 class _AppLocalizationsDelegate

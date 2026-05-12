@@ -376,4 +376,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get backButton => 'Back Button';
+
+  @override
+  String get comingSoon => 'Coming Soon';
+
+  @override
+  String get pageNotAvailable =>
+      'This page is currently under development. Please check back later.';
 }

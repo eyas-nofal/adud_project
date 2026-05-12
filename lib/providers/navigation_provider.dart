@@ -1,9 +1,9 @@
+import 'package:adud_project/screens/hub/tools_list_screen.dart';
 import 'package:adud_project/screens/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 // استيراد الشاشات الخاصة بك
 import 'package:adud_project/screens/home/disability_home_screen.dart';
 import 'package:adud_project/screens/home/volunteer_home_screen.dart';
-import 'package:adud_project/screens/tools%20donations/donationscreen.dart';
 
 enum UserRole { disabled, volunteer }
 
@@ -34,7 +34,7 @@ class NavigationProvider with ChangeNotifier {
         : const VolunteerHomeScreen(),
 
     // التبويب 1: التبرع
-    const Donationscreen(),
+    const DonationScreen(),
 
     // التبويب 2: الورش (استبدلها بالشاشة الحقيقية لاحقاً)
     const Center(child: Text('صفحة الورش')),

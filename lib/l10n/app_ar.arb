@@ -130,5 +130,7 @@
   "editAccountType": "تعديل نوع الحساب",
   "notificationsEnabled": "تم تفعيل الإشعارات",
   "notificationsDisabled": "تم إيقاف الإشعارات",
-  "backButton": "زر العودة"
+  "backButton": "زر العودة",
+  "comingSoon": "قريباً",
+  "pageNotAvailable": "هذه الصفحة قيد التطوير حالياً، يرجى التحقق لاحقاً."
 }

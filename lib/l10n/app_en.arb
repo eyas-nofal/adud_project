@@ -129,5 +129,7 @@
   "editAccountType": "Edit Account Type",
   "notificationsEnabled": "Notifications Enabled",
   "notificationsDisabled": "Notifications Disabled",
-  "backButton": "Back Button"
+  "backButton": "Back Button",
+  "comingSoon": "Coming Soon",
+  "pageNotAvailable": "This page is currently under development. Please check back later."
 }
