@@ -10,8 +10,7 @@ Widget buildHeader(BuildContext context, AppLocalizations l10n, bool isArabic) {
   int completedActivities = 12;
   double userRating = 4.8;
   int thisMonthActivities = 5;
-  int receivedHelpsCount = 12;
-  int contributionHours = 24;
+
 
   return Stack(
     alignment: Alignment.topCenter,
