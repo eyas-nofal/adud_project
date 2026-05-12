@@ -341,4 +341,37 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get forgotPasswordSupport =>
       'إذا واجهت مشكلة في استعادة كلمة المرور يرجى التواصل مع الدعم الفني';
+
+  @override
+  String get language => 'اللغة';
+
+  @override
+  String get accountType => 'نوع الحساب';
+
+  @override
+  String get arabic => 'عربي';
+
+  @override
+  String get english => 'English';
+
+  @override
+  String get editProfilePicture => 'تغيير الصورة الشخصية';
+
+  @override
+  String get viewHelpsDetails => 'عرض تفاصيل المساعدات';
+
+  @override
+  String get viewContributionDetails => 'عرض تفاصيل المساهمة';
+
+  @override
+  String get editAccountType => 'تعديل نوع الحساب';
+
+  @override
+  String get notificationsEnabled => 'تم تفعيل الإشعارات';
+
+  @override
+  String get notificationsDisabled => 'تم إيقاف الإشعارات';
+
+  @override
+  String get backButton => 'زر العودة';
 }

@@ -1,3 +1,4 @@
+import 'package:adud_project/screens/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 // استيراد الشاشات الخاصة بك
 import 'package:adud_project/screens/home/disability_home_screen.dart';
@@ -39,6 +40,6 @@ class NavigationProvider with ChangeNotifier {
     const Center(child: Text('صفحة الورش')),
 
     // التبويب 3: حسابي (استبدلها بالشاشة الحقيقية لاحقاً)
-    const Center(child: Text('صفحة حسابي')),
+    const ProfileScreen(),
   ];
 }

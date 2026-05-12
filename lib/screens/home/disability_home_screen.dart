@@ -2,9 +2,9 @@ import 'package:adud_project/l10n/app_localizations.dart';
 import 'package:adud_project/models/help_request_model.dart';
 import 'package:adud_project/models/story_model.dart';
 import 'package:adud_project/screens/core/constants/app_colors.dart';
-import 'package:adud_project/screens/core/widgets/custom_app_header.dart';
-import 'package:adud_project/screens/core/widgets/custom_help_button.dart';
-import 'package:adud_project/screens/core/widgets/custom_help_request.dart';
+import 'package:adud_project/screens/core/widgets/common/custom_app_header.dart';
+import 'package:adud_project/screens/core/widgets/buttons/custom_help_button.dart';
+import 'package:adud_project/screens/core/widgets/cards/custom_help_request.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

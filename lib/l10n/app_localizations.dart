@@ -751,6 +751,72 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'إذا واجهت مشكلة في استعادة كلمة المرور يرجى التواصل مع الدعم الفني'**
   String get forgotPasswordSupport;
+
+  /// No description provided for @language.
+  ///
+  /// In ar, this message translates to:
+  /// **'اللغة'**
+  String get language;
+
+  /// No description provided for @accountType.
+  ///
+  /// In ar, this message translates to:
+  /// **'نوع الحساب'**
+  String get accountType;
+
+  /// No description provided for @arabic.
+  ///
+  /// In ar, this message translates to:
+  /// **'عربي'**
+  String get arabic;
+
+  /// No description provided for @english.
+  ///
+  /// In ar, this message translates to:
+  /// **'English'**
+  String get english;
+
+  /// No description provided for @editProfilePicture.
+  ///
+  /// In ar, this message translates to:
+  /// **'تغيير الصورة الشخصية'**
+  String get editProfilePicture;
+
+  /// No description provided for @viewHelpsDetails.
+  ///
+  /// In ar, this message translates to:
+  /// **'عرض تفاصيل المساعدات'**
+  String get viewHelpsDetails;
+
+  /// No description provided for @viewContributionDetails.
+  ///
+  /// In ar, this message translates to:
+  /// **'عرض تفاصيل المساهمة'**
+  String get viewContributionDetails;
+
+  /// No description provided for @editAccountType.
+  ///
+  /// In ar, this message translates to:
+  /// **'تعديل نوع الحساب'**
+  String get editAccountType;
+
+  /// No description provided for @notificationsEnabled.
+  ///
+  /// In ar, this message translates to:
+  /// **'تم تفعيل الإشعارات'**
+  String get notificationsEnabled;
+
+  /// No description provided for @notificationsDisabled.
+  ///
+  /// In ar, this message translates to:
+  /// **'تم إيقاف الإشعارات'**
+  String get notificationsDisabled;
+
+  /// No description provided for @backButton.
+  ///
+  /// In ar, this message translates to:
+  /// **'زر العودة'**
+  String get backButton;
 }
 
 class _AppLocalizationsDelegate

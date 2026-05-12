@@ -1,7 +1,7 @@
 import 'package:adud_project/l10n/app_localizations.dart';
 import 'package:adud_project/screens/auth/login_screen.dart';
 import 'package:adud_project/screens/core/constants/app_colors.dart';
-import 'package:adud_project/screens/core/widgets/custom_button.dart';
+import 'package:adud_project/screens/core/widgets/buttons/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

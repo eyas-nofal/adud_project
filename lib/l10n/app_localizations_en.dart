@@ -343,4 +343,37 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get forgotPasswordSupport =>
       'If you face any issue resetting your password, please contact support';
+
+  @override
+  String get language => 'Language';
+
+  @override
+  String get accountType => 'Account Type';
+
+  @override
+  String get arabic => 'عربي';
+
+  @override
+  String get english => 'English';
+
+  @override
+  String get editProfilePicture => 'Change Profile Picture';
+
+  @override
+  String get viewHelpsDetails => 'View Helps Details';
+
+  @override
+  String get viewContributionDetails => 'View Contribution Details';
+
+  @override
+  String get editAccountType => 'Edit Account Type';
+
+  @override
+  String get notificationsEnabled => 'Notifications Enabled';
+
+  @override
+  String get notificationsDisabled => 'Notifications Disabled';
+
+  @override
+  String get backButton => 'Back Button';
 }

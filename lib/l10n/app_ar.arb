@@ -119,5 +119,16 @@
   "emailHint": "example@email.com",
   "sendResetLink": "إرسال رابط الاستعادة",
   "rememberPasswordLogin": "تذكرت كلمة المرور؟",
-  "forgotPasswordSupport": "إذا واجهت مشكلة في استعادة كلمة المرور يرجى التواصل مع الدعم الفني"
+  "forgotPasswordSupport": "إذا واجهت مشكلة في استعادة كلمة المرور يرجى التواصل مع الدعم الفني",
+  "language": "اللغة",
+  "accountType": "نوع الحساب",
+  "arabic": "عربي",
+  "english": "English",
+  "editProfilePicture": "تغيير الصورة الشخصية",
+  "viewHelpsDetails": "عرض تفاصيل المساعدات",
+  "viewContributionDetails": "عرض تفاصيل المساهمة",
+  "editAccountType": "تعديل نوع الحساب",
+  "notificationsEnabled": "تم تفعيل الإشعارات",
+  "notificationsDisabled": "تم إيقاف الإشعارات",
+  "backButton": "زر العودة"
 }

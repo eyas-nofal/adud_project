@@ -118,5 +118,16 @@
   "sendResetLink": "Send reset link",
   "rememberPasswordLogin": "Remember your password?",
   "forgotPasswordSupport": "If you face any issue resetting your password, please contact support",
-  "forgotPasswordTitle": "Forgot Password"
+  "forgotPasswordTitle": "Forgot Password",
+  "language": "Language",
+  "accountType": "Account Type",
+  "arabic": "عربي",
+  "english": "English",
+  "editProfilePicture": "Change Profile Picture",
+  "viewHelpsDetails": "View Helps Details",
+  "viewContributionDetails": "View Contribution Details",
+  "editAccountType": "Edit Account Type",
+  "notificationsEnabled": "Notifications Enabled",
+  "notificationsDisabled": "Notifications Disabled",
+  "backButton": "Back Button"
 }
