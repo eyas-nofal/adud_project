@@ -131,5 +131,21 @@
   "notificationsDisabled": "Notifications Disabled",
   "backButton": "Back Button",
   "comingSoon": "Coming Soon",
-  "pageNotAvailable": "This page is currently under development. Please check back later."
+  "pageNotAvailable": "This page is currently under development. Please check back later.",
+  "reportHelpInfoTitle": "Your report will help in:",
+  "reportHelpInfo1": "Improving accessibility services for all",
+  "reportHelpInfo2": "Raising awareness among place owners",
+  "reportHelpInfo3": "Creating a comprehensive map of accessible places",
+  "placeNameLabel": "Place Name *",
+  "placeNameHint": "Example: Faculty of Science",
+  "locationLabel": "Location *",
+  "locationHint": "Address or neighborhood",
+  "useCurrentLocation": "Use my current location",
+  "problemTypeLabel": "Problem Type * (You can choose more than one)",
+  "problemType1": "No wheelchair ramp",
+  "problemType2": "Narrow doors",
+  "problemType3": "No elevator",
+  "additionalDetailsLabel": "Additional Details (Optional)",
+  "additionalDetailsHint": "Write any details that help understand the problem...",
+  "submitReport": "Submit Report"
 }

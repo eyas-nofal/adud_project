@@ -383,4 +383,55 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get pageNotAvailable =>
       'This page is currently under development. Please check back later.';
+
+  @override
+  String get reportHelpInfoTitle => 'Your report will help in:';
+
+  @override
+  String get reportHelpInfo1 => 'Improving accessibility services for all';
+
+  @override
+  String get reportHelpInfo2 => 'Raising awareness among place owners';
+
+  @override
+  String get reportHelpInfo3 =>
+      'Creating a comprehensive map of accessible places';
+
+  @override
+  String get placeNameLabel => 'Place Name *';
+
+  @override
+  String get placeNameHint => 'Example: Faculty of Science';
+
+  @override
+  String get locationLabel => 'Location *';
+
+  @override
+  String get locationHint => 'Address or neighborhood';
+
+  @override
+  String get useCurrentLocation => 'Use my current location';
+
+  @override
+  String get problemTypeLabel =>
+      'Problem Type * (You can choose more than one)';
+
+  @override
+  String get problemType1 => 'No wheelchair ramp';
+
+  @override
+  String get problemType2 => 'Narrow doors';
+
+  @override
+  String get problemType3 => 'No elevator';
+
+  @override
+  String get additionalDetailsLabel => 'Additional Details (Optional)';
+
+  @override
+  String get additionalDetailsHint =>
+      'Write any details that help understand the problem...';
+
+  @override
+  String get submitReport => 'Submit Report';
 }

@@ -132,5 +132,21 @@
   "notificationsDisabled": "تم إيقاف الإشعارات",
   "backButton": "زر العودة",
   "comingSoon": "قريباً",
-  "pageNotAvailable": "هذه الصفحة قيد التطوير حالياً، يرجى التحقق لاحقاً."
+  "pageNotAvailable": "هذه الصفحة قيد التطوير حالياً، يرجى التحقق لاحقاً.",
+  "reportHelpInfoTitle": "بلاغك سيساعد في:",
+  "reportHelpInfo1": "تحسين خدمات الوصول للجميع",
+  "reportHelpInfo2": "توعية أصحاب الأماكن",
+  "reportHelpInfo3": "إنشاء خريطة شاملة للأماكن المهيأة",
+  "placeNameLabel": "اسم المكان *",
+  "placeNameHint": "مثال: كلية العلوم",
+  "locationLabel": "الموقع *",
+  "locationHint": "العنوان أو الحي",
+  "useCurrentLocation": "استخدام موقعي الحالي",
+  "problemTypeLabel": "نوع المشكلة * (يمكنك اختيار أكثر من واحدة)",
+  "problemType1": "عدم وجود منحدر للكراسي المتحركة",
+  "problemType2": "أبواب ضيقة",
+  "problemType3": "عدم وجود مصعد",
+  "additionalDetailsLabel": "تفاصيل إضافية (اختياري)",
+  "additionalDetailsHint": "اكتب أي تفاصيل تساعد في فهم المشكلة...",
+  "submitReport": "إرسال البلاغ"
 }
