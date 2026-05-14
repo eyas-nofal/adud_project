@@ -751,6 +751,180 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'إذا واجهت مشكلة في استعادة كلمة المرور يرجى التواصل مع الدعم الفني'**
   String get forgotPasswordSupport;
+
+  /// No description provided for @language.
+  ///
+  /// In ar, this message translates to:
+  /// **'اللغة'**
+  String get language;
+
+  /// No description provided for @accountType.
+  ///
+  /// In ar, this message translates to:
+  /// **'نوع الحساب'**
+  String get accountType;
+
+  /// No description provided for @arabic.
+  ///
+  /// In ar, this message translates to:
+  /// **'عربي'**
+  String get arabic;
+
+  /// No description provided for @english.
+  ///
+  /// In ar, this message translates to:
+  /// **'English'**
+  String get english;
+
+  /// No description provided for @editProfilePicture.
+  ///
+  /// In ar, this message translates to:
+  /// **'تغيير الصورة الشخصية'**
+  String get editProfilePicture;
+
+  /// No description provided for @viewHelpsDetails.
+  ///
+  /// In ar, this message translates to:
+  /// **'عرض تفاصيل المساعدات'**
+  String get viewHelpsDetails;
+
+  /// No description provided for @viewContributionDetails.
+  ///
+  /// In ar, this message translates to:
+  /// **'عرض تفاصيل المساهمة'**
+  String get viewContributionDetails;
+
+  /// No description provided for @editAccountType.
+  ///
+  /// In ar, this message translates to:
+  /// **'تعديل نوع الحساب'**
+  String get editAccountType;
+
+  /// No description provided for @notificationsEnabled.
+  ///
+  /// In ar, this message translates to:
+  /// **'تم تفعيل الإشعارات'**
+  String get notificationsEnabled;
+
+  /// No description provided for @notificationsDisabled.
+  ///
+  /// In ar, this message translates to:
+  /// **'تم إيقاف الإشعارات'**
+  String get notificationsDisabled;
+
+  /// No description provided for @backButton.
+  ///
+  /// In ar, this message translates to:
+  /// **'زر العودة'**
+  String get backButton;
+
+  /// No description provided for @comingSoon.
+  ///
+  /// In ar, this message translates to:
+  /// **'قريباً'**
+  String get comingSoon;
+
+  /// No description provided for @pageNotAvailable.
+  ///
+  /// In ar, this message translates to:
+  /// **'هذه الصفحة قيد التطوير حالياً، يرجى التحقق لاحقاً.'**
+  String get pageNotAvailable;
+
+  /// No description provided for @reportHelpInfoTitle.
+  ///
+  /// In ar, this message translates to:
+  /// **'بلاغك سيساعد في:'**
+  String get reportHelpInfoTitle;
+
+  /// No description provided for @reportHelpInfo1.
+  ///
+  /// In ar, this message translates to:
+  /// **'تحسين خدمات الوصول للجميع'**
+  String get reportHelpInfo1;
+
+  /// No description provided for @reportHelpInfo2.
+  ///
+  /// In ar, this message translates to:
+  /// **'توعية أصحاب الأماكن'**
+  String get reportHelpInfo2;
+
+  /// No description provided for @reportHelpInfo3.
+  ///
+  /// In ar, this message translates to:
+  /// **'إنشاء خريطة شاملة للأماكن المهيأة'**
+  String get reportHelpInfo3;
+
+  /// No description provided for @placeNameLabel.
+  ///
+  /// In ar, this message translates to:
+  /// **'اسم المكان *'**
+  String get placeNameLabel;
+
+  /// No description provided for @placeNameHint.
+  ///
+  /// In ar, this message translates to:
+  /// **'مثال: كلية العلوم'**
+  String get placeNameHint;
+
+  /// No description provided for @locationLabel.
+  ///
+  /// In ar, this message translates to:
+  /// **'الموقع *'**
+  String get locationLabel;
+
+  /// No description provided for @locationHint.
+  ///
+  /// In ar, this message translates to:
+  /// **'العنوان أو الحي'**
+  String get locationHint;
+
+  /// No description provided for @useCurrentLocation.
+  ///
+  /// In ar, this message translates to:
+  /// **'استخدام موقعي الحالي'**
+  String get useCurrentLocation;
+
+  /// No description provided for @problemTypeLabel.
+  ///
+  /// In ar, this message translates to:
+  /// **'نوع المشكلة * (يمكنك اختيار أكثر من واحدة)'**
+  String get problemTypeLabel;
+
+  /// No description provided for @problemType1.
+  ///
+  /// In ar, this message translates to:
+  /// **'عدم وجود منحدر للكراسي المتحركة'**
+  String get problemType1;
+
+  /// No description provided for @problemType2.
+  ///
+  /// In ar, this message translates to:
+  /// **'أبواب ضيقة'**
+  String get problemType2;
+
+  /// No description provided for @problemType3.
+  ///
+  /// In ar, this message translates to:
+  /// **'عدم وجود مصعد'**
+  String get problemType3;
+
+  /// No description provided for @additionalDetailsLabel.
+  ///
+  /// In ar, this message translates to:
+  /// **'تفاصيل إضافية (اختياري)'**
+  String get additionalDetailsLabel;
+
+  /// No description provided for @additionalDetailsHint.
+  ///
+  /// In ar, this message translates to:
+  /// **'اكتب أي تفاصيل تساعد في فهم المشكلة...'**
+  String get additionalDetailsHint;
+
+  /// No description provided for @submitReport.
+  ///
+  /// In ar, this message translates to:
+  /// **'إرسال البلاغ'**
+  String get submitReport;
 }
 
 class _AppLocalizationsDelegate

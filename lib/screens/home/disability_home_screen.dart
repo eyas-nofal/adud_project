@@ -2,9 +2,10 @@ import 'package:adud_project/l10n/app_localizations.dart';
 import 'package:adud_project/models/help_request_model.dart';
 import 'package:adud_project/models/story_model.dart';
 import 'package:adud_project/screens/core/constants/app_colors.dart';
-import 'package:adud_project/screens/core/widgets/custom_app_header.dart';
-import 'package:adud_project/screens/core/widgets/custom_help_button.dart';
-import 'package:adud_project/screens/core/widgets/custom_help_request.dart';
+import 'package:adud_project/screens/core/widgets/common/custom_app_header.dart';
+import 'package:adud_project/screens/core/widgets/buttons/custom_help_button.dart';
+import 'package:adud_project/screens/core/widgets/cards/custom_help_request.dart';
+import 'package:adud_project/screens/reports/reports_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -86,6 +87,83 @@ class _DisabilityHomeScreenState extends State<DisabilityHomeScreen> {
                       icon: Icons.people,
                     ),
                   ),
+                  SizedBox(height: 15.h),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20.w),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const ReportsScreen(),
+                          ),
+                        );
+                      },
+                      borderRadius: BorderRadius.circular(20.r),
+                      child: Container(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 20.w,
+                          vertical: 15.h,
+                        ),
+                        decoration: BoxDecoration(
+                          color: AppColors.neutral50,
+                          borderRadius: BorderRadius.circular(20.r),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withValues(alpha: 0.05),
+                              blurRadius: 10,
+                              offset: const Offset(0, 4),
+                            ),
+                          ],
+                        ),
+                        child: Row(
+                          children: [
+                            Container(
+                              padding: EdgeInsets.all(12.r),
+                              decoration: BoxDecoration(
+                                color: AppColors.danger50,
+                                shape: BoxShape.circle,
+                              ),
+                              child: Icon(
+                                Icons.error_outline,
+                                color: AppColors.danger500,
+                                size: 28.sp,
+                              ),
+                            ),
+                            SizedBox(width: 15.w),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    AppLocalizations.of(
+                                      context,
+                                    )!.reportInaccessiblePlace,
+                                    style: TextStyle(
+                                      fontSize: 16.sp,
+                                      fontWeight: FontWeight.bold,
+                                      color: AppColors.neutral900,
+                                    ),
+                                  ),
+                                  SizedBox(height: 4.h),
+                                  Text(
+                                    AppLocalizations.of(
+                                      context,
+                                    )!.improveAccessibility,
+                                    style: TextStyle(
+                                      fontSize: 13.sp,
+                                      color: AppColors.neutral600,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 20.h),
                 ],
               ),
             ),
