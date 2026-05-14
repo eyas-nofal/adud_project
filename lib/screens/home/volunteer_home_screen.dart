@@ -77,15 +77,6 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
                       duration: 'ساعة واحدة',
                       onAccept: () {},
                     ),
-                    DisabilityRequestCard(
-                      name: 'عمر',
-                      category: 'مرافقة',
-                      distance: '1.5 كم',
-                      time: 'بعد ساعة',
-                      duration: 'ساعتان',
-                      // لم نقم بتمرير المتغير price هنا، لذلك لن تظهر أيقونة الدفع
-                      onAccept: () {},
-                    ),
                     SizedBox(height: 15.w),
                     Row(
                       children: [
