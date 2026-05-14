@@ -75,7 +75,6 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
                       distance: '0.8 كم',
                       time: 'الآن',
                       duration: 'ساعة واحدة',
-                      price: 10.0, // هنا مررنا السعر، فستظهر الأيقونة الخضراء
                       onAccept: () {},
                     ),
                     DisabilityRequestCard(
