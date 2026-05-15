@@ -240,7 +240,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get redeem => 'Redeem';
 
   @override
-  String get points => 'نقطة';
+  String get points => 'points';
 
   @override
   String get completedHelp => 'Completed Help';

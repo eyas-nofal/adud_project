@@ -76,16 +76,6 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
                       distance: '0.8 كم',
                       time: 'الآن',
                       duration: 'ساعة واحدة',
-                      price: 10.0, // هنا مررنا السعر، فستظهر الأيقونة الخضراء
-                      onAccept: () {},
-                    ),
-                    DisabilityRequestCard(
-                      name: 'عمر',
-                      category: 'مرافقة',
-                      distance: '1.5 كم',
-                      time: 'بعد ساعة',
-                      duration: 'ساعتان',
-                      // لم نقم بتمرير المتغير price هنا، لذلك لن تظهر أيقونة الدفع
                       onAccept: () {},
                     ),
                     SizedBox(height: 15.w),
