@@ -186,7 +186,7 @@ class _DisabilityHomeScreenState extends State<DisabilityHomeScreen> {
                       Partner(
                         name: 'NABD',
                         imagePath: 'assets/images/NABD.png',
-                        backgroundColor: Colors.red.shade50,
+                        backgroundColor: Colors.grey.shade200,
                       ),
                     ],
                   ),

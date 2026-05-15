@@ -123,32 +123,33 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
                       },
                     ),
                     SizedBox(height: 30.h),
-                    PartnersSection(
-                      partners: [
-                        Partner(
-                          name: 'مركز الخدمات',
-                          imagePath: '',
-                          backgroundColor: Colors.pink.shade100,
-                        ),
-                        Partner(
-                          name: 'جامعة المعرفة',
-                          imagePath: '',
-                          backgroundColor: Colors.yellow.shade200,
-                        ),
-                        Partner(
-                          name: 'مستشفى الأمل',
-                          imagePath: '',
-                          backgroundColor: Colors.green.shade100,
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                  PartnersSection(
+                    partners: [
+                      Partner(
+                        name: 'BAU',
+                        imagePath: 'assets/images/bau.png',
+                        backgroundColor: Colors.green.shade200,
+                      ),
+                      Partner(
+                        name: 'Europion Union',
+                        imagePath: 'assets/images/eu.png',
+                        backgroundColor: Colors.blue.shade200,
+                      ),
+                      Partner(
+                        name: 'NABD',
+                        imagePath: 'assets/images/NABD.png',
+                        backgroundColor: Colors.grey.shade200,
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 20.h),
+                ],
               ),
             ),
           ),
-        ],
-      ),
-    );
-  }
+        ),
+      ],
+    ),
+  );
+}
 }
