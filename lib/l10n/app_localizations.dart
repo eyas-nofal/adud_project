@@ -925,6 +925,24 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'إرسال البلاغ'**
   String get submitReport;
+
+  /// No description provided for @partnersAndSupporters.
+  ///
+  /// In ar, this message translates to:
+  /// **'شركاؤنا والداعمون'**
+  String get partnersAndSupporters;
+
+  /// No description provided for @proudSupportAndPartnership.
+  ///
+  /// In ar, this message translates to:
+  /// **'نفخر بدعم وشراكة'**
+  String get proudSupportAndPartnership;
+
+  /// No description provided for @thanksForCommunitySupport.
+  ///
+  /// In ar, this message translates to:
+  /// **'شكراً لكل من ساهم في دعم مجتمعنا'**
+  String get thanksForCommunitySupport;
 }
 
 class _AppLocalizationsDelegate

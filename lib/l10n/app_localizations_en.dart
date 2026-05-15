@@ -434,4 +434,14 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get submitReport => 'Submit Report';
+
+  @override
+  String get partnersAndSupporters => 'Our Partners and Supporters';
+
+  @override
+  String get proudSupportAndPartnership => 'Proud of support and partnership';
+
+  @override
+  String get thanksForCommunitySupport =>
+      'Thank you to everyone who contributed to supporting our community';
 }

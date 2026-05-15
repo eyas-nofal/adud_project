@@ -4,6 +4,7 @@ import 'package:adud_project/screens/core/constants/app_colors.dart';
 import 'package:adud_project/screens/core/widgets/common/custom_app_header.dart';
 import 'package:adud_project/screens/core/widgets/cards/Disability_Request_Card_inVolunteerPage.dart';
 import 'package:adud_project/screens/core/widgets/cards/custom_reward_offerds.dart';
+import 'package:adud_project/screens/core/widgets/cards/partners_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -130,6 +131,26 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
                       onRedeem: () {
                         // هذا الكود لن يُنفذ لأن الزر معطل (null) برمجياً داخل الكلاس
                       },
+                    ),
+                    SizedBox(height: 30.h),
+                    PartnersSection(
+                      partners: [
+                        Partner(
+                          name: 'مركز الخدمات',
+                          imagePath: '',
+                          backgroundColor: Colors.pink.shade100,
+                        ),
+                        Partner(
+                          name: 'جامعة المعرفة',
+                          imagePath: '',
+                          backgroundColor: Colors.yellow.shade200,
+                        ),
+                        Partner(
+                          name: 'مستشفى الأمل',
+                          imagePath: '',
+                          backgroundColor: Colors.green.shade100,
+                        ),
+                      ],
                     ),
                   ],
                 ),

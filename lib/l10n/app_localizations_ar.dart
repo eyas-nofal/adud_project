@@ -429,4 +429,13 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get submitReport => 'إرسال البلاغ';
+
+  @override
+  String get partnersAndSupporters => 'شركاؤنا والداعمون';
+
+  @override
+  String get proudSupportAndPartnership => 'نفخر بدعم وشراكة';
+
+  @override
+  String get thanksForCommunitySupport => 'شكراً لكل من ساهم في دعم مجتمعنا';
 }

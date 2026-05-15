@@ -6,6 +6,7 @@ import 'package:adud_project/screens/core/widgets/common/custom_app_header.dart'
 import 'package:adud_project/screens/core/widgets/buttons/custom_help_button.dart';
 import 'package:adud_project/screens/core/widgets/cards/custom_help_request.dart';
 import 'package:adud_project/screens/reports/reports_screen.dart';
+import 'package:adud_project/screens/core/widgets/cards/partners_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -162,6 +163,26 @@ class _DisabilityHomeScreenState extends State<DisabilityHomeScreen> {
                         ),
                       ),
                     ),
+                  ),
+                  SizedBox(height: 20.h),
+                  PartnersSection(
+                    partners: [
+                      Partner(
+                        name: 'BAU',
+                        imagePath: 'assets/images/bau.png',
+                        backgroundColor: Colors.green.shade200,
+                      ),
+                      Partner(
+                        name: 'Europion Union',
+                        imagePath: 'assets/images/eu.png',
+                        backgroundColor: Colors.blue.shade200,
+                      ),
+                      Partner(
+                        name: 'USAID',
+                        imagePath: 'assets/images/usaid.png',
+                        backgroundColor: Colors.red.shade50,
+                      ),
+                    ],
                   ),
                   SizedBox(height: 20.h),
                 ],

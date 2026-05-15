@@ -148,5 +148,8 @@
   "problemType3": "عدم وجود مصعد",
   "additionalDetailsLabel": "تفاصيل إضافية (اختياري)",
   "additionalDetailsHint": "اكتب أي تفاصيل تساعد في فهم المشكلة...",
-  "submitReport": "إرسال البلاغ"
+  "submitReport": "إرسال البلاغ",
+  "partnersAndSupporters": "شركاؤنا والداعمون",
+  "proudSupportAndPartnership": "نفخر بدعم وشراكة",
+  "thanksForCommunitySupport": "شكراً لكل من ساهم في دعم مجتمعنا"
 }

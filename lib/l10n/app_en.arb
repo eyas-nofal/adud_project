@@ -147,5 +147,8 @@
   "problemType3": "No elevator",
   "additionalDetailsLabel": "Additional Details (Optional)",
   "additionalDetailsHint": "Write any details that help understand the problem...",
-  "submitReport": "Submit Report"
+  "submitReport": "Submit Report",
+  "partnersAndSupporters": "Our Partners and Supporters",
+  "proudSupportAndPartnership": "Proud of support and partnership",
+  "thanksForCommunitySupport": "Thank you to everyone who contributed to supporting our community"
 }
