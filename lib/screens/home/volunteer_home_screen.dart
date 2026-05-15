@@ -1,9 +1,9 @@
 
 import 'package:adud_project/l10n/app_localizations.dart';
 import 'package:adud_project/screens/core/constants/app_colors.dart';
-import 'package:adud_project/screens/core/widgets/custom_app_header.dart';
-import 'package:adud_project/screens/core/widgets/Disability_Request_Card.dart';
-import 'package:adud_project/screens/core/widgets/custom_reward_offerds.dart';
+import 'package:adud_project/screens/core/widgets/common/custom_app_header.dart';
+import 'package:adud_project/screens/core/widgets/cards/Disability_Request_Card_inVolunteerPage.dart';
+import 'package:adud_project/screens/core/widgets/cards/custom_reward_offerds.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -75,16 +75,6 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
                       distance: '0.8 كم',
                       time: 'الآن',
                       duration: 'ساعة واحدة',
-                      price: 10.0, // هنا مررنا السعر، فستظهر الأيقونة الخضراء
-                      onAccept: () {},
-                    ),
-                    DisabilityRequestCard(
-                      name: 'عمر',
-                      category: 'مرافقة',
-                      distance: '1.5 كم',
-                      time: 'بعد ساعة',
-                      duration: 'ساعتان',
-                      // لم نقم بتمرير المتغير price هنا، لذلك لن تظهر أيقونة الدفع
                       onAccept: () {},
                     ),
                     SizedBox(height: 15.w),

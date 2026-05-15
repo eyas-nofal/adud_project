@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:adud_project/screens/core/widgets/custom_glass_container.dart';
+import 'package:adud_project/screens/core/widgets/cards/custom_glass_container.dart';
 
 class CustomAppHeader extends StatelessWidget {
   final String title;

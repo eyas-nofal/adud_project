@@ -1,5 +1,5 @@
 import 'package:adud_project/providers/navigation_provider.dart';
-import 'package:adud_project/screens/core/widgets/custom_button_navbar.dart';
+import 'package:adud_project/screens/core/widgets/buttons/custom_button_navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

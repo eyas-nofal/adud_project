@@ -5,12 +5,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class HelpCardWidget extends StatelessWidget {
   final HelpRequestModel request;
 
-  // تم حذف المتغيرات الإضافية لأنها موجودة أصلاً داخل الـ request
   const HelpCardWidget({super.key, required this.request});
 
   @override
   Widget build(BuildContext context) {
-    // نستخدم الحالة القادمة من الـ Model
     bool isActive = request.status == HelpStatus.active;
 
     return Container(
@@ -19,7 +17,6 @@ class HelpCardWidget extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20.r),
-        // البرواز يظهر فقط إذا كان الطلب نشطاً
         border: isActive
             ? Border.all(color: const Color(0xFF2ED573), width: 2)
             : null,
@@ -35,12 +32,11 @@ class HelpCardWidget extends StatelessWidget {
         children: [
           Row(
             children: [
-              _buildLeadingIcon(),
+              _buildLeadingIcon(), // الأيقونة الدائرية هنا
               SizedBox(width: 12.w),
               Expanded(
                 child: Column(
-                  crossAxisAlignment:
-                      CrossAxisAlignment.start, // للعربية والإنجليزية بشكل صحيح
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       request.title,
@@ -64,20 +60,17 @@ class HelpCardWidget extends StatelessWidget {
     );
   }
 
-  // استخدام اللون والأيقونة من الـ Model
   Widget _buildLeadingIcon() {
     return Container(
       padding: EdgeInsets.all(10.w),
       decoration: BoxDecoration(
-        color: Color(
-          request.themeColor,
-        ), // يضع اللون الأزرق كافتراضي إذا كانت القيمة فارغة        borderRadius: BorderRadius.circular(12.r),
+        color: Color(request.themeColor),
+        shape: BoxShape.circle,
       ),
       child: Icon(request.icon, color: Colors.white, size: 24.sp),
     );
   }
 
-  // عرض اسم المستخدم
   Widget _buildUserInfo() {
     return Row(
       children: [
@@ -98,7 +91,6 @@ class HelpCardWidget extends StatelessWidget {
     );
   }
 
-  // الأزرار
   Widget _buildActionButtons(bool isActive) {
     return Row(
       children: [
