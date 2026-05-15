@@ -6,6 +6,7 @@ import 'package:adud_project/screens/core/widgets/common/custom_app_header.dart'
 import 'package:adud_project/screens/core/widgets/buttons/custom_help_button.dart';
 import 'package:adud_project/screens/core/widgets/cards/custom_help_request.dart';
 import 'package:adud_project/screens/reports/reports_screen.dart';
+import 'package:adud_project/screens/requests/create_request_screen.dart';
 import 'package:adud_project/screens/core/widgets/cards/partners_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -59,7 +60,12 @@ class _DisabilityHomeScreenState extends State<DisabilityHomeScreen> {
                   ),
                   HelpRequestButton(
                     onTap: () {
-                      // هنا ممكن تفتح صفحة الاتصال أو الفورم
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const CreateRequestScreen(),
+                        ),
+                      );
                     },
                   ),
                   HelpCardWidget(

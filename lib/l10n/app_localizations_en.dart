@@ -444,4 +444,19 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get thanksForCommunitySupport =>
       'Thank you to everyone who contributed to supporting our community';
+
+  @override
+  String get oneHour => '1 Hour';
+
+  @override
+  String get twoHours => '2 Hours';
+
+  @override
+  String get threeHours => '3 Hours';
+
+  @override
+  String get addDetailsHelper => 'Add any details that help the volunteer...';
+
+  @override
+  String get selectLocation => 'Select Location';
 }

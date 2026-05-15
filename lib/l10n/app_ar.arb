@@ -151,5 +151,10 @@
   "submitReport": "إرسال البلاغ",
   "partnersAndSupporters": "شركاؤنا والداعمون",
   "proudSupportAndPartnership": "نفخر بدعم وشراكة",
-  "thanksForCommunitySupport": "شكراً لكل من ساهم في دعم مجتمعنا"
+  "thanksForCommunitySupport": "شكراً لكل من ساهم في دعم مجتمعنا",
+  "oneHour": "ساعة واحدة",
+  "twoHours": "ساعتان",
+  "threeHours": "3 ساعات",
+  "addDetailsHelper": "أضف أي تفاصيل تساعد المتطوع...",
+  "selectLocation": "تحديد الموقع"
 }

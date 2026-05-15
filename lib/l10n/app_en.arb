@@ -152,5 +152,10 @@
   "submitReport": "Submit Report",
   "partnersAndSupporters": "Our Partners and Supporters",
   "proudSupportAndPartnership": "Proud of support and partnership",
-  "thanksForCommunitySupport": "Thank you to everyone who contributed to supporting our community"
+  "thanksForCommunitySupport": "Thank you to everyone who contributed to supporting our community",
+  "oneHour": "1 Hour",
+  "twoHours": "2 Hours",
+  "threeHours": "3 Hours",
+  "addDetailsHelper": "Add any details that help the volunteer...",
+  "selectLocation": "Select Location"
 }

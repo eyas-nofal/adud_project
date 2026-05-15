@@ -438,4 +438,19 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get thanksForCommunitySupport => 'شكراً لكل من ساهم في دعم مجتمعنا';
+
+  @override
+  String get oneHour => 'ساعة واحدة';
+
+  @override
+  String get twoHours => 'ساعتان';
+
+  @override
+  String get threeHours => '3 ساعات';
+
+  @override
+  String get addDetailsHelper => 'أضف أي تفاصيل تساعد المتطوع...';
+
+  @override
+  String get selectLocation => 'تحديد الموقع';
 }

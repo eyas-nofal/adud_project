@@ -943,6 +943,36 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'شكراً لكل من ساهم في دعم مجتمعنا'**
   String get thanksForCommunitySupport;
+
+  /// No description provided for @oneHour.
+  ///
+  /// In ar, this message translates to:
+  /// **'ساعة واحدة'**
+  String get oneHour;
+
+  /// No description provided for @twoHours.
+  ///
+  /// In ar, this message translates to:
+  /// **'ساعتان'**
+  String get twoHours;
+
+  /// No description provided for @threeHours.
+  ///
+  /// In ar, this message translates to:
+  /// **'3 ساعات'**
+  String get threeHours;
+
+  /// No description provided for @addDetailsHelper.
+  ///
+  /// In ar, this message translates to:
+  /// **'أضف أي تفاصيل تساعد المتطوع...'**
+  String get addDetailsHelper;
+
+  /// No description provided for @selectLocation.
+  ///
+  /// In ar, this message translates to:
+  /// **'تحديد الموقع'**
+  String get selectLocation;
 }
 
 class _AppLocalizationsDelegate
