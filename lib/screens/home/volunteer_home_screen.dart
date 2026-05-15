@@ -1,4 +1,3 @@
-
 import 'package:adud_project/l10n/app_localizations.dart';
 import 'package:adud_project/screens/core/constants/app_colors.dart';
 import 'package:adud_project/screens/core/widgets/common/custom_app_header.dart';
@@ -32,97 +31,105 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
           ),
           Expanded(
             child: SingleChildScrollView(
-              child: Padding(
-                padding: EdgeInsets.all(20.w),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              // شلنا الـ Padding من هون عشان نقدر نتحكم بكل عنصر لحال
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(height: 15.h), // مسافة من فوق بدل الـ Padding العام
+                  
+                  // أعطينا Padding بس للعناصر اللي بدنا إياها تبعد عن الحفة
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 15.w),
+                    child: Column(
                       children: [
-                        Text(
-                          AppLocalizations.of(context)!.nearbyRequests,
-                          style: const TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.black,
-                          ),
-                        ),
-
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 10,
-                            vertical: 4,
-                          ),
-                          decoration: BoxDecoration(
-                            color: AppColors.success100,
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Text(
-                            "3 طلبات ",
-                            style: const TextStyle(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w600,
-                              color: AppColors.success600,
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              AppLocalizations.of(context)!.nearbyRequests,
+                              style: const TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.black,
+                              ),
                             ),
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 10,
+                                vertical: 4,
+                              ),
+                              decoration: BoxDecoration(
+                                color: AppColors.success100,
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: const Text(
+                                "3 طلبات ",
+                                style: TextStyle(
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w600,
+                                  color: AppColors.success600,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 15.w),
+                        DisabilityRequestCard(
+                          name: 'آية',
+                          category: 'تنقل ومواصلات',
+                          distance: '0.8 كم',
+                          time: 'الآن',
+                          duration: 'ساعة واحدة',
+                          onAccept: () {},
+                        ),
+                        SizedBox(height: 15.w),
+                        Row(
+                          children: [
+                            const Icon(
+                              Icons.celebration_outlined,
+                              color: Colors.purpleAccent,
+                              size: 28,
+                            ),
+                            SizedBox(width: 15.w),
+                            Text(
+                              AppLocalizations.of(context)!.rewardOffers,
+                              style: const TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 15.w),
+                        CustomRewardCard(
+                          userPoints: 150,
+                          reward: RewardModel(
+                            titleAr: "قسيمة خصم للمتجر الصحي",
+                            titleEn: "Healthy Store Discount",
+                            pointsRequired: 100,
+                            iconPath: "🍕",
                           ),
+                          onRedeem: () {},
+                        ),
+                        SizedBox(height: 12.h),
+                        CustomRewardCard(
+                          userPoints: 150,
+                          reward: RewardModel(
+                            titleAr: "اشتراك شهر مجاني في النادي",
+                            titleEn: "Free month gym membership",
+                            pointsRequired: 200,
+                            iconPath: "❤️",
+                          ),
+                          onRedeem: () {},
                         ),
                       ],
                     ),
-                    SizedBox(height: 15.w),
-                    DisabilityRequestCard(
-                      name: 'آية',
-                      category: 'تنقل ومواصلات',
-                      distance: '0.8 كم',
-                      time: 'الآن',
-                      duration: 'ساعة واحدة',
-                      onAccept: () {},
-                    ),
-                    SizedBox(height: 15.w),
-                    Row(
-                      children: [
-                        const Icon(
-                          Icons.celebration_outlined, // أو Icons.redeem
-                          color: Colors.purpleAccent,
-                          size: 28,
-                        ),
-                        SizedBox(width: 15.w),
-                        Text(
-                          AppLocalizations.of(context)!.rewardOffers,
-                          style: const TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 15.w),
-                    // هنا يمكنك إضافة قائمة بالعروض أو المكافآت المتاحة للمتطوعين
-                    CustomRewardCard(
-                      userPoints: 150,
-                      reward: RewardModel(
-                        titleAr: "قسيمة خصم للمتجر الصحي",
-                        titleEn: "Healthy Store Discount",
-                        pointsRequired: 100,
-                        iconPath: "🍕",
-                      ),
-                      onRedeem: () {},
-                    ),
-                    SizedBox(height: 12.h),
-                    CustomRewardCard(
-                      userPoints: 150, // نقاط المستخدم الحالية
-                      reward: RewardModel(
-                        titleAr: "اشتراك شهر مجاني في النادي",
-                        titleEn: "Free month gym membership",
-                        pointsRequired: 200,
-                        iconPath: "❤️",
-                      ),
-                      onRedeem: () {
-                        // هذا الكود لن يُنفذ لأن الزر معطل (null) برمجياً داخل الكلاس
-                      },
-                    ),
-                    SizedBox(height: 30.h),
+                  ),
+                  
+                  SizedBox(height: 30.h),
+                  
+                  // هذا القسم بدون Padding فببلش من الحفة بالضبط
                   PartnersSection(
                     partners: [
                       Partner(
@@ -147,9 +154,8 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
               ),
             ),
           ),
-        ),
-      ],
-    ),
-  );
-}
+        ],
+      ),
+    );
+  }
 }
