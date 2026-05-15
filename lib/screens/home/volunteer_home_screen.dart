@@ -31,17 +31,68 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
           ),
           Expanded(
             child: SingleChildScrollView(
-              // شلنا الـ Padding من هون عشان نقدر نتحكم بكل عنصر لحال
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 15.h), // مسافة من فوق بدل الـ Padding العام
+                  SizedBox(height: 15.h), 
                   
-                  // أعطينا Padding بس للعناصر اللي بدنا إياها تبعد عن الحفة
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 15.w),
                     child: Column(
                       children: [
+                        // --- بداية تصميم بطاقة نقاط المكافآت ---
+                        Container(
+                          width: double.infinity,
+                          padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 12.h),
+                          margin: EdgeInsets.only(bottom: 25.h), // مسافة بين النقاط والطلبات القريبة
+                          decoration: BoxDecoration(
+                            // يمكنك تعديل اللون ليتناسب مع درجة لون التطبيق لديك
+                            color: const Color(0xFF26C6DA).withOpacity(0.2), 
+                            borderRadius: BorderRadius.circular(16.r),
+                          ),
+                          child: Row(
+                            children: [
+                              // أيقونة النجمة على اليمين
+                              Container(
+                                padding: EdgeInsets.all(8.w),
+                                decoration: const BoxDecoration(
+                                  color: Colors.amber, // اللون الأصفر الدائري
+                                  shape: BoxShape.circle,
+                                ),
+                                child: const Icon(
+                                  Icons.star_border_rounded, // يمكنك تغييرها لـ Icons.star إذا بدك اياها معبأة
+                                  color: Colors.black87,
+                                  size: 28,
+                                ),
+                              ),
+                              SizedBox(width: 15.w),
+                              // نصوص النقاط
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    AppLocalizations.of(context)!.rewardPoints, // استخدام الترجمة كما طلبت
+                                    style: TextStyle(
+                                      fontSize: 14.sp,
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.black54,
+                                    ),
+                                  ),
+                                  Text(
+                                    "150 نقطة",
+                                    style: TextStyle(
+                                      fontSize: 18.sp,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black87,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        // --- نهاية تصميم بطاقة نقاط المكافآت ---
+
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -129,7 +180,6 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
                   
                   SizedBox(height: 30.h),
                   
-                  // هذا القسم بدون Padding فببلش من الحفة بالضبط
                   PartnersSection(
                     partners: [
                       Partner(
