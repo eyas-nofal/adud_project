@@ -13,8 +13,16 @@ class ForgotPasswordScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.primary100,
       body: SafeArea(
-        child: Column(
-          children: [
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            return SingleChildScrollView(
+              child: ConstrainedBox(
+                constraints: BoxConstraints(
+                  minHeight: constraints.maxHeight,
+                ),
+                child: IntrinsicHeight(
+                  child: Column(
+                    children: [
             SizedBox(height: 30.h),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
@@ -132,7 +140,12 @@ class ForgotPasswordScreen extends StatelessWidget {
                 style: TextStyle(fontSize: 12.sp, color: Colors.grey[600]),
               ),
             ),
-          ],
+                    ],
+                  ),
+                ),
+              ),
+            );
+          },
         ),
       ),
     );
