@@ -34,8 +34,8 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 15.h), 
-                  
+                  SizedBox(height: 15.h),
+
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 15.w),
                     child: Column(
@@ -131,7 +131,7 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
                       ],
                     ),
                   ),
-                  
+
                   SizedBox(height: 30.h),
                   PartnersSection(
                     partners: [
