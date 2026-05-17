@@ -94,22 +94,26 @@ Widget buildHeader(BuildContext context, AppLocalizations l10n, bool isArabic) {
                     color: Colors.white,
                   ),
                 ),
-                InkWell(
-                  onTap: () => showCustomFlushbar(
-                    context,
-                    l10n.editProfilePicture,
-                    success: true,
-                  ),
-                  child: Container(
-                    padding: const EdgeInsets.all(4),
-                    decoration: const BoxDecoration(
-                      color: AppColors.primary500,
-                      shape: BoxShape.circle,
+                Semantics(
+                  button: true,
+                  label: l10n.editProfilePicture,
+                  child: InkWell(
+                    onTap: () => showCustomFlushbar(
+                      context,
+                      l10n.editProfilePicture,
+                      success: true,
                     ),
-                    child: const Icon(
-                      Icons.edit,
-                      size: 16,
-                      color: Colors.white,
+                    child: Container(
+                      padding: const EdgeInsets.all(4),
+                      decoration: const BoxDecoration(
+                        color: AppColors.primary500,
+                        shape: BoxShape.circle,
+                      ),
+                      child: const Icon(
+                        Icons.edit,
+                        size: 16,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ),
@@ -196,10 +200,12 @@ Widget buildStatsCards(
     padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0),
     child: Column(
       children: [
-        InkWell(
-          onTap: () => showCustomFlushbar(context, l10n.viewHelpsDetails),
-          borderRadius: BorderRadius.circular(20),
-          child: _buildInfoCard(
+        Semantics(
+          button: true,
+          child: InkWell(
+            onTap: () => showCustomFlushbar(context, l10n.viewHelpsDetails),
+            borderRadius: BorderRadius.circular(20),
+            child: _buildInfoCard(
             title: l10n.receivedHelp,
             subtitle: isArabic
                 ? '$receivedHelpsCount مرة'
@@ -209,12 +215,15 @@ Widget buildStatsCards(
             iconBgColor: AppColors.primary100,
           ),
         ),
+        ),
         const SizedBox(height: 15),
-        InkWell(
-          onTap: () =>
-              showCustomFlushbar(context, l10n.viewContributionDetails),
-          borderRadius: BorderRadius.circular(20),
-          child: _buildInfoCard(
+        Semantics(
+          button: true,
+          child: InkWell(
+            onTap: () =>
+                showCustomFlushbar(context, l10n.viewContributionDetails),
+            borderRadius: BorderRadius.circular(20),
+            child: _buildInfoCard(
             title: l10n.contributionHours,
             subtitle: isArabic
                 ? '$contributionHours ساعة'
@@ -223,6 +232,7 @@ Widget buildStatsCards(
             iconColor: AppColors.success600,
             iconBgColor: AppColors.success100,
           ),
+        ),
         ),
       ],
     ),

@@ -49,21 +49,24 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
                           ),
                         ),
 
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 10,
-                            vertical: 4,
-                          ),
-                          decoration: BoxDecoration(
-                            color: AppColors.success100,
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Text(
-                            "3 طلبات ",
-                            style: const TextStyle(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w600,
-                              color: AppColors.success600,
+                        Semantics(
+                          label: 'يوجد 3 طلبات قريبة',
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 10,
+                              vertical: 4,
+                            ),
+                            decoration: BoxDecoration(
+                              color: AppColors.success100,
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: Text(
+                              "3 طلبات ",
+                              style: const TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w600,
+                                color: AppColors.success600,
+                              ),
                             ),
                           ),
                         ),
@@ -79,23 +82,26 @@ class _VolunteerHomeScreenState extends State<VolunteerHomeScreen> {
                       onAccept: () {},
                     ),
                     SizedBox(height: 15.w),
-                    Row(
-                      children: [
-                        const Icon(
-                          Icons.celebration_outlined, // أو Icons.redeem
-                          color: Colors.purpleAccent,
-                          size: 28,
-                        ),
-                        SizedBox(width: 15.w),
-                        Text(
-                          AppLocalizations.of(context)!.rewardOffers,
-                          style: const TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.black,
+                    Semantics(
+                      header: true,
+                      child: Row(
+                        children: [
+                          const Icon(
+                            Icons.celebration_outlined, // أو Icons.redeem
+                            color: Colors.purpleAccent,
+                            size: 28,
                           ),
-                        ),
-                      ],
+                          SizedBox(width: 15.w),
+                          Text(
+                            AppLocalizations.of(context)!.rewardOffers,
+                            style: const TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                     SizedBox(height: 15.w),
                     // هنا يمكنك إضافة قائمة بالعروض أو المكافآت المتاحة للمتطوعين

@@ -15,10 +15,14 @@ class AppLoader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: SpinKitDualRing(
-        color: color,
-        size: size.w,
-        lineWidth: 3.0, 
+      child: Semantics(
+        label: 'جاري التحميل',
+        liveRegion: true,
+        child: SpinKitDualRing(
+          color: color,
+          size: size.w,
+          lineWidth: 3.0, 
+        ),
       ),
     );
   }

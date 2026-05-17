@@ -54,31 +54,41 @@ class CustomAppHeader extends StatelessWidget {
   }
 
   Widget _buildTextSection() {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      crossAxisAlignment: CrossAxisAlignment
-          .start, 
-      children: [
-        Text(
-          title,
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 24.sp,
-            fontWeight: FontWeight.bold,
+    return Semantics(
+      header: true,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            title,
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 24.sp,
+              fontWeight: FontWeight.bold,
+            ),
           ),
-        ),
-        Text(
-          subTitle,
-          style: TextStyle(color: Colors.white70, fontSize: 16.sp),
-        ),
-      ],
+          Text(
+            subTitle,
+            style: TextStyle(color: Colors.white70, fontSize: 16.sp),
+          ),
+        ],
+      ),
     );
   }
 
   Widget _buildIconButton(IconData icon, int count, VoidCallback? onTap) {
-    return Stack(
-      clipBehavior: Clip.none,
-      children: [
+    String label = icon == Icons.notifications ? 'الإشعارات' : 'الرسائل';
+    if (count > 0) {
+      label += '، يوجد $count ${icon == Icons.notifications ? 'إشعار' : 'رسالة'} جديدة';
+    }
+    
+    return Semantics(
+      button: true,
+      label: label,
+      child: Stack(
+        clipBehavior: Clip.none,
+        children: [
         CustomGlassContainer(
           onTab: onTap,
           size: 50,
@@ -91,7 +101,8 @@ class CustomAppHeader extends StatelessWidget {
             end: -5, // 'end' تغنيك عن حساب isRtl
             child: _buildBadge(count),
           ),
-      ],
+        ],
+      ),
     );
   }
 

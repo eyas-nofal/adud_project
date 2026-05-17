@@ -23,27 +23,31 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: width.w,
-      height: height.h,
-      child: ElevatedButton(
-        onPressed: onPressed,
-        style: ElevatedButton.styleFrom(
-          backgroundColor: backgroundColor,
-          foregroundColor: textColor,
-          elevation: 3,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
+    return Semantics(
+      button: true,
+      label: text,
+      child: SizedBox(
+        width: width.w,
+        height: height.h,
+        child: ElevatedButton(
+          onPressed: onPressed,
+          style: ElevatedButton.styleFrom(
+            backgroundColor: backgroundColor,
+            foregroundColor: textColor,
+            elevation: 3,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+            padding: EdgeInsets.zero,
           ),
-          padding: EdgeInsets.zero,
-        ),
-        child: Center(
-          child: Text(
-            text,
-            style: GoogleFonts.cairo(
-              fontSize: 24.sp,
-              fontWeight: FontWeight.bold,
-              color: textColor,
+          child: Center(
+            child: Text(
+              text,
+              style: GoogleFonts.cairo(
+                fontSize: 24.sp,
+                fontWeight: FontWeight.bold,
+                color: textColor,
+              ),
             ),
           ),
         ),

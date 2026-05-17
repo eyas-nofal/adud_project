@@ -41,12 +41,14 @@ class _CustomGlassContainerState extends State<CustomGlassContainer> {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: widget.onTab,
-      onTapDown: _onTapDown,
-      onTapUp: _onTapUp,
-      onTapCancel: _onTapCancel,
-      behavior: HitTestBehavior.opaque,
+    return Semantics(
+      button: true,
+      child: GestureDetector(
+        onTap: widget.onTab,
+        onTapDown: _onTapDown,
+        onTapUp: _onTapUp,
+        onTapCancel: _onTapCancel,
+        behavior: HitTestBehavior.opaque,
       child: AnimatedScale(
         scale: _scale,
         duration: const Duration(milliseconds: 100),
@@ -70,6 +72,7 @@ class _CustomGlassContainerState extends State<CustomGlassContainer> {
             ),
           ),
         ),
+      ),
       ),
     );
   }

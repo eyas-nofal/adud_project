@@ -1,12 +1,16 @@
 import 'package:another_flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 
+import 'package:flutter/semantics.dart';
+
 // هاد الكود كامل، انسخه زي ما هو
 void showCustomFlushbar(
   BuildContext context,
   String message, {
   bool success = true, 
 }) {
+  SemanticsService.announce(message, TextDirection.rtl);
+  
   Flushbar(
     margin: const EdgeInsets.all(16),
     borderRadius: BorderRadius.circular(12),

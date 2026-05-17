@@ -96,61 +96,69 @@ class _SettingsSectionState extends State<SettingsSection> {
                       ),
                       Row(
                         children: [
-                          GestureDetector(
-                            onTap: () {
-                              context.read<LanguageProvider>().setLocale(
-                                const Locale('ar'),
-                              );
-                            },
-                            child: Container(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 16,
-                                vertical: 8,
-                              ),
-                              decoration: BoxDecoration(
-                                color: isArabic
-                                    ? AppColors.primary500
-                                    : AppColors.neutral100,
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              child: Text(
-                                l10n.arabic,
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500,
+                          Semantics(
+                            button: true,
+                            label: l10n.arabic,
+                            child: GestureDetector(
+                              onTap: () {
+                                context.read<LanguageProvider>().setLocale(
+                                  const Locale('ar'),
+                                );
+                              },
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 16,
+                                  vertical: 8,
+                                ),
+                                decoration: BoxDecoration(
                                   color: isArabic
-                                      ? Colors.white
-                                      : AppColors.neutral600,
+                                      ? AppColors.primary500
+                                      : AppColors.neutral100,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Text(
+                                  l10n.arabic,
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500,
+                                    color: isArabic
+                                        ? Colors.white
+                                        : AppColors.neutral600,
+                                  ),
                                 ),
                               ),
                             ),
                           ),
                           const SizedBox(width: 8),
-                          GestureDetector(
-                            onTap: () {
-                              context.read<LanguageProvider>().setLocale(
-                                const Locale('en'),
-                              );
-                            },
-                            child: Container(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 16,
-                                vertical: 8,
-                              ),
-                              decoration: BoxDecoration(
-                                color: !isArabic
-                                    ? AppColors.primary500
-                                    : AppColors.neutral100,
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              child: Text(
-                                l10n.english,
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500,
+                          Semantics(
+                            button: true,
+                            label: l10n.english,
+                            child: GestureDetector(
+                              onTap: () {
+                                context.read<LanguageProvider>().setLocale(
+                                  const Locale('en'),
+                                );
+                              },
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 16,
+                                  vertical: 8,
+                                ),
+                                decoration: BoxDecoration(
                                   color: !isArabic
-                                      ? Colors.white
-                                      : AppColors.neutral600,
+                                      ? AppColors.primary500
+                                      : AppColors.neutral100,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Text(
+                                  l10n.english,
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500,
+                                    color: !isArabic
+                                        ? Colors.white
+                                        : AppColors.neutral600,
+                                  ),
                                 ),
                               ),
                             ),
@@ -162,10 +170,13 @@ class _SettingsSectionState extends State<SettingsSection> {
                 ),
                 const Divider(color: AppColors.neutral200),
                 // Account Type
-                InkWell(
-                  onTap: () =>
-                      showCustomFlushbar(context, l10n.editAccountType),
-                  child: Padding(
+                Semantics(
+                  button: true,
+                  label: l10n.editAccountType,
+                  child: InkWell(
+                    onTap: () =>
+                        showCustomFlushbar(context, l10n.editAccountType),
+                    child: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 10.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -198,6 +209,7 @@ class _SettingsSectionState extends State<SettingsSection> {
                       ],
                     ),
                   ),
+                ),
                 ),
                 const Divider(color: AppColors.neutral200),
                 // Notifications

@@ -41,10 +41,13 @@ Widget buildOtherCards(BuildContext context, AppLocalizations l10n, bool isArabi
     required VoidCallback onTap,
     Color? borderColor,
   }) {
-    return InkWell(
-      onTap: onTap,
-      borderRadius: BorderRadius.circular(20),
-      child: Container(
+    return Semantics(
+      button: true,
+      label: title,
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(20),
+        child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
         decoration: BoxDecoration(
           color: Colors.white,
@@ -77,12 +80,16 @@ Widget buildOtherCards(BuildContext context, AppLocalizations l10n, bool isArabi
           ],
         ),
       ),
-    );
+      ),
+    ); 
   }
   Widget buildLogoutButton(AppLocalizations l10n) {
-    return InkWell(
-      onTap: () {},
-      borderRadius: BorderRadius.circular(20),
+    return Semantics(
+      button: true,
+      label: l10n.logout,
+      child: InkWell(
+        onTap: () {},
+        borderRadius: BorderRadius.circular(20),
       child: Container(
         width: double.infinity,
         padding: const EdgeInsets.symmetric(vertical: 18),
@@ -109,6 +116,7 @@ Widget buildOtherCards(BuildContext context, AppLocalizations l10n, bool isArabi
             ),
           ],
         ),
+      ),
       ),
     );
   }

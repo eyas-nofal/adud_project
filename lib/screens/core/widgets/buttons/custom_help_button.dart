@@ -12,9 +12,13 @@ class HelpRequestButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final isRtl = Directionality.of(context) == TextDirection.rtl;
 
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
+    return Semantics(
+      button: true,
+      label: AppLocalizations.of(context)!.requestHelp,
+      hint: 'اضغط مرتين لطلب المساعدة',
+      child: GestureDetector(
+        onTap: onTap,
+        child: Container(
         width: double.infinity,
         margin: EdgeInsets.symmetric(horizontal: 20.w, vertical: 15.h),
         padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 18.h),
@@ -83,6 +87,7 @@ class HelpRequestButton extends StatelessWidget {
             ),
           ],
         ),
+      ),
       ),
     );
   }

@@ -33,18 +33,22 @@ class CustomBottomNavBar extends StatelessWidget {
             icon: const Icon(Icons.home_outlined),
             activeIcon: _buildActiveBox(Icons.home),
             label: AppLocalizations.of(context)!.navHome,
+            tooltip: AppLocalizations.of(context)!.navHome,
           ),
           BottomNavigationBarItem(
             icon: const Icon(Icons.recycling_outlined),
             label: AppLocalizations.of(context)!.navDonate,
+            tooltip: AppLocalizations.of(context)!.navDonate,
           ),
           BottomNavigationBarItem(
             icon: const Icon(Icons.school_outlined),
             label: AppLocalizations.of(context)!.navWorkshops,
+            tooltip: AppLocalizations.of(context)!.navWorkshops,
           ),
           BottomNavigationBarItem(
             icon: const Icon(Icons.person_outline),
             label: AppLocalizations.of(context)!.navProfile,
+            tooltip: AppLocalizations.of(context)!.navProfile,
           ),
         ],
       ),

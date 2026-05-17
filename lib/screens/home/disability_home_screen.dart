@@ -45,17 +45,20 @@ class _DisabilityHomeScreenState extends State<DisabilityHomeScreen> {
                   // داخل الـ Column في صفحة الهوم
                   SizedBox(
                     height: 110, // ارتفاع كافي للدوائر والنصوص تحتها
-                    child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      reverse: true, // عشان يبلش من اليمين لليسار (عربي)
-                      itemCount: stories.length,
-                      padding: const EdgeInsets.symmetric(horizontal: 10),
-                      itemBuilder: (context, index) {
-                        return Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 8),
-                          child: buildStoryItem(context, stories[index]),
-                        );
-                      },
+                    child: Semantics(
+                      label: 'قائمة القصص',
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        reverse: true, // عشان يبلش من اليمين لليسار (عربي)
+                        itemCount: stories.length,
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        itemBuilder: (context, index) {
+                          return Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 8),
+                            child: buildStoryItem(context, stories[index]),
+                          );
+                        },
+                      ),
                     ),
                   ),
                   HelpRequestButton(
@@ -97,8 +100,12 @@ class _DisabilityHomeScreenState extends State<DisabilityHomeScreen> {
                   SizedBox(height: 15.h),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 20.w),
-                    child: InkWell(
-                      onTap: () {
+                    child: Semantics(
+                      button: true,
+                      label: 'تبليغ عن مكان غير مهيأ',
+                      hint: 'اضغط مرتين لفتح صفحة التبليغ',
+                      child: InkWell(
+                        onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
@@ -168,6 +175,7 @@ class _DisabilityHomeScreenState extends State<DisabilityHomeScreen> {
                           ],
                         ),
                       ),
+                    ),
                     ),
                   ),
                   SizedBox(height: 20.h),

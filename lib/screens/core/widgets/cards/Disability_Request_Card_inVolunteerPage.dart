@@ -31,16 +31,18 @@ class DisabilityRequestCard extends StatelessWidget {
   // --- Build Method: Where the UI is drawn and widgets are composed ---
   @override
   Widget build(BuildContext context) {
-    return Directionality(
-      // Ensures the text direction matches the context (RTL for Arabic)
-      textDirection: Directionality.of(context),
-      
-      // Main container representing the white card
-      child: Container(
-        // Outer margin (.h for responsive height, .w for responsive width)
-        margin: EdgeInsets.symmetric(vertical: 8.h, horizontal: 1.w),
-        // Inner padding to keep content away from the edges
-        padding: EdgeInsets.all(16.w),
+    return Semantics(
+      label: 'طلب مساعدة من $name، $category',
+      child: Directionality(
+        // Ensures the text direction matches the context (RTL for Arabic)
+        textDirection: Directionality.of(context),
+        
+        // Main container representing the white card
+        child: Container(
+          // Outer margin (.h for responsive height, .w for responsive width)
+          margin: EdgeInsets.symmetric(vertical: 8.h, horizontal: 1.w),
+          // Inner padding to keep content away from the edges
+          padding: EdgeInsets.all(16.w),
         
         // Card decoration: white background, rounded corners, and a soft shadow
         decoration: BoxDecoration(
@@ -146,39 +148,45 @@ class DisabilityRequestCard extends StatelessWidget {
             SizedBox(height: 20.h), // Spacing before the button
             
             // -- Section 3: "Accept Request" Button --
-            Container(
-              width: double.infinity, // Button takes the full width of the card
-              height: 48.h,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12.r),
-                gradient: const LinearGradient( // Gradient background for the button container
-                  colors: [AppColors.success400, AppColors.primary600],
-                  begin: Alignment.centerRight,
-                  end: Alignment.centerLeft,
-                ),
-              ),
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.transparent, // Transparent background so the container's gradient shows through
-                  shadowColor: Colors.transparent,
-                  shape: RoundedRectangleBorder(
+              Semantics(
+                button: true,
+                label: 'قبول الطلب',
+                hint: 'اضغط مرتين لقبول طلب المساعدة',
+                child: Container(
+                  width: double.infinity, // Button takes the full width of the card
+                  height: 48.h,
+                  decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12.r),
+                    gradient: const LinearGradient( // Gradient background for the button container
+                      colors: [AppColors.success400, AppColors.primary600],
+                      begin: Alignment.centerRight,
+                      end: Alignment.centerLeft,
+                    ),
                   ),
-                ),
-                // Execute the accept callback when pressed
-                onPressed: onAccept,
-                child: Text(
-                  'قبول الطلب',
-                  style: GoogleFonts.cairo(
-                    color: Colors.white,
-                    fontSize: 16.sp,
-                    fontWeight: FontWeight.bold,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.transparent, // Transparent background so the container's gradient shows through
+                      shadowColor: Colors.transparent,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12.r),
+                      ),
+                    ),
+                    // Execute the accept callback when pressed
+                    onPressed: onAccept,
+                    child: Text(
+                      'قبول الطلب',
+                      style: GoogleFonts.cairo(
+                        color: Colors.white,
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
                 ),
               ),
-            ),
           ],
         ),
+      ),
       ),
     );
   }

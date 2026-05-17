@@ -102,19 +102,22 @@ class _ReportsScreenState extends State<ReportsScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      children: [
-                        Icon(Icons.info_outline, color: AppColors.primary600, size: 24.sp),
-                        SizedBox(width: 10.w),
-                        Text(
-                          l10n.reportHelpInfoTitle,
-                          style: TextStyle(
-                            color: AppColors.primary700,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16.sp,
+                    Semantics(
+                      header: true,
+                      child: Row(
+                        children: [
+                          Icon(Icons.info_outline, color: AppColors.primary600, size: 24.sp),
+                          SizedBox(width: 10.w),
+                          Text(
+                            l10n.reportHelpInfoTitle,
+                            style: TextStyle(
+                              color: AppColors.primary700,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16.sp,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                     SizedBox(height: 10.h),
                     _buildInfoBulletItem(l10n.reportHelpInfo1),
@@ -147,24 +150,28 @@ class _ReportsScreenState extends State<ReportsScreen> {
                 suffixIcon: Icon(Icons.location_on_outlined, color: AppColors.neutral500),
               ),
               SizedBox(height: 8.h),
-              InkWell(
-                onTap: () {
-                  // TODO: Get current location
-                },
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(Icons.my_location, color: AppColors.primary600, size: 16.sp),
-                    SizedBox(width: 6.w),
-                    Text(
-                      l10n.useCurrentLocation,
-                      style: TextStyle(
-                        color: AppColors.primary600,
-                        fontSize: 14.sp,
-                        fontWeight: FontWeight.w500,
+              Semantics(
+                button: true,
+                label: l10n.useCurrentLocation,
+                child: InkWell(
+                  onTap: () {
+                    // TODO: Get current location
+                  },
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(Icons.my_location, color: AppColors.primary600, size: 16.sp),
+                      SizedBox(width: 6.w),
+                      Text(
+                        l10n.useCurrentLocation,
+                        style: TextStyle(
+                          color: AppColors.primary600,
+                          fontSize: 14.sp,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
 
@@ -196,25 +203,29 @@ class _ReportsScreenState extends State<ReportsScreen> {
               SizedBox(
                 width: double.infinity,
                 height: 50.h,
-                child: ElevatedButton(
-                  onPressed: _isFormValid ? () {
-                    // TODO: Submit report
-                    Navigator.pop(context);
-                  } : null,
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: _isFormValid ? AppColors.primary500 : AppColors.neutral300,
-                    disabledBackgroundColor: AppColors.neutral300,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12.r),
+                child: Semantics(
+                  button: true,
+                  label: l10n.submitReport,
+                  child: ElevatedButton(
+                    onPressed: _isFormValid ? () {
+                      // TODO: Submit report
+                      Navigator.pop(context);
+                    } : null,
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: _isFormValid ? AppColors.primary500 : AppColors.neutral300,
+                      disabledBackgroundColor: AppColors.neutral300,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12.r),
+                      ),
+                      elevation: 0,
                     ),
-                    elevation: 0,
-                  ),
-                  child: Text(
-                    l10n.submitReport,
-                    style: TextStyle(
-                      color: _isFormValid ? Colors.white : AppColors.neutral500,
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.bold,
+                    child: Text(
+                      l10n.submitReport,
+                      style: TextStyle(
+                        color: _isFormValid ? Colors.white : AppColors.neutral500,
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
@@ -266,21 +277,25 @@ class _ReportsScreenState extends State<ReportsScreen> {
     Widget? suffixIcon,
     int maxLines = 1,
   }) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(12.r),
-        border: Border.all(color: AppColors.neutral300),
-      ),
-      child: TextField(
-        controller: controller,
-        maxLines: maxLines,
-        decoration: InputDecoration(
-          hintText: hintText,
-          hintStyle: TextStyle(color: AppColors.neutral400, fontSize: 14.sp),
-          border: InputBorder.none,
-          contentPadding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 14.h),
-          suffixIcon: suffixIcon,
+    return Semantics(
+      textField: true,
+      label: hintText,
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(12.r),
+          border: Border.all(color: AppColors.neutral300),
+        ),
+        child: TextField(
+          controller: controller,
+          maxLines: maxLines,
+          decoration: InputDecoration(
+            hintText: hintText,
+            hintStyle: TextStyle(color: AppColors.neutral400, fontSize: 14.sp),
+            border: InputBorder.none,
+            contentPadding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 14.h),
+            suffixIcon: suffixIcon,
+          ),
         ),
       ),
     );
@@ -288,37 +303,42 @@ class _ReportsScreenState extends State<ReportsScreen> {
 
   Widget _buildProblemTypeOption(String text) {
     final isSelected = _selectedProblems.contains(text);
-    return GestureDetector(
-      onTap: () => _toggleProblem(text),
-      child: Container(
-        margin: EdgeInsets.only(bottom: 12.h),
-        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 14.h),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(12.r),
-          border: Border.all(
-            color: isSelected ? AppColors.primary500 : AppColors.neutral300,
-            width: isSelected ? 1.5 : 1.0,
+    return Semantics(
+      button: true,
+      checked: isSelected,
+      label: text,
+      child: GestureDetector(
+        onTap: () => _toggleProblem(text),
+        child: Container(
+          margin: EdgeInsets.only(bottom: 12.h),
+          padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 14.h),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(12.r),
+            border: Border.all(
+              color: isSelected ? AppColors.primary500 : AppColors.neutral300,
+              width: isSelected ? 1.5 : 1.0,
+            ),
           ),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Expanded(
-              child: Text(
-                text,
-                style: TextStyle(
-                  color: AppColors.neutral700,
-                  fontSize: 14.sp,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                child: Text(
+                  text,
+                  style: TextStyle(
+                    color: AppColors.neutral700,
+                    fontSize: 14.sp,
+                  ),
                 ),
               ),
-            ),
-            Icon(
-              isSelected ? Icons.check_circle : Icons.circle_outlined,
-              color: isSelected ? AppColors.primary500 : AppColors.neutral300,
-              size: 24.sp,
-            ),
-          ],
+              Icon(
+                isSelected ? Icons.check_circle : Icons.circle_outlined,
+                color: isSelected ? AppColors.primary500 : AppColors.neutral300,
+                size: 24.sp,
+              ),
+            ],
+          ),
         ),
       ),
     );
